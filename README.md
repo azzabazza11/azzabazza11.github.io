@@ -25,6 +25,8 @@ Edit the `PROJECTS` array in `index.html`:
 
 - Set `platforms`: `desktop`, `android`, `ios` (PWA / mobile-friendly)
 - Set `status`: `live` or `soon`
-- Add `links` with GitHub Pages URLs
+- Set `desktopUrl` / `appUrl` (phone entry can differ, e.g. Sphere Circles)
+- Set `installable: true` to show **Install app** on mobile / Android / iOS filters  
+  (links to the app with `?install=1` so that origin can run the install prompt)
 
-Individual apps link back to this hub from their Share sections.
+The hub picks **Open app** vs desktop entry from the active platform filter and device detection — Android/iOS filters never show a separate desktop-only action.
