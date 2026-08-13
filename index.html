@@ -50,22 +50,32 @@
     }
     .tagline {
       font-size: clamp(0.95rem, 2.5vw, 1.1rem);
-      color: #8a93a3; max-width: 520px; margin: 0 auto 20px; line-height: 1.55;
+      color: #8a93a3; max-width: 520px; margin: 0 auto; line-height: 1.55;
     }
-    .hero-actions { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
-    .hero-actions button, .hero-actions a.btn {
-      display: inline-flex; align-items: center; gap: 8px;
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 18px; }
+    .hero-actions a.btn, .footer-actions button, .footer-actions a.btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
       border-radius: 999px; padding: 11px 18px;
       font: 650 13px system-ui, sans-serif; text-decoration: none;
       cursor: pointer; border: 0;
       -webkit-tap-highlight-color: transparent;
       transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
     }
-    .hero-actions button:active, .hero-actions a.btn:active { transform: scale(0.97); }
+    .hero-actions a.btn:active, .footer-actions button:active, .footer-actions a.btn:active { transform: scale(0.97); }
     #btnShare { background: rgba(127,212,255,0.18); color: #cfefff; border: 1px solid rgba(127,212,255,0.35); }
     #btnShare:hover { background: rgba(127,212,255,0.28); }
+    #btnInstall {
+      background: rgba(68,255,170,0.16); color: #44ffaa;
+      border: 1px solid rgba(68,255,170,0.38);
+    }
+    #btnInstall:hover { background: rgba(68,255,170,0.26); }
+    #btnInstall[hidden] { display: none !important; }
     #btnKofi { background: #ff5e5b; color: #fff; }
     #btnKofi:hover { box-shadow: 0 4px 20px rgba(255,94,91,0.35); }
+    .footer-actions {
+      display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;
+      margin: 20px 0 14px;
+    }
 
     /* Toolbar */
     .toolbar {
@@ -197,6 +207,18 @@
     footer a { color: #7fd4ff; text-decoration: none; }
     footer a:hover { text-decoration: underline; }
 
+    #toast {
+      position: fixed; left: 50%; bottom: calc(20px + env(safe-area-inset-bottom, 0));
+      transform: translateX(-50%) translateY(120%);
+      z-index: 60; max-width: min(92vw, 360px);
+      background: rgba(16, 20, 30, 0.96); color: #e8eef8;
+      border: 1px solid rgba(255,255,255,0.12); border-radius: 12px;
+      padding: 12px 16px; font: 500 13px system-ui, sans-serif;
+      text-align: center; pointer-events: none;
+      transition: transform .25s ease;
+    }
+    #toast.show { transform: translateX(-50%) translateY(0); }
+
     /* Share modal */
     #qrModal {
       display: none; position: fixed; inset: 0; z-index: 50;
@@ -240,7 +262,6 @@
       </div>
       <p class="tagline">Free web apps that run in your browser — no accounts, no ads, no server-side data. Install on phone or open on desktop.</p>
       <div class="hero-actions">
-        <button type="button" id="btnShare">Share this page</button>
         <a class="btn" id="btnKofi" href="https://ko-fi.com/aaroncallinan" target="_blank" rel="noopener noreferrer">Support on Ko-fi</a>
       </div>
     </header>
@@ -262,10 +283,16 @@
     <main class="grid" id="grid" aria-live="polite"></main>
 
     <footer>
+      <div class="footer-actions">
+        <button type="button" id="btnInstall">Install this app</button>
+        <button type="button" id="btnShare">Share this page</button>
+      </div>
       <p>Built as single-file HTML apps — fast, private, and easy to share.</p>
-      <p style="margin-top:8px">More projects added as they ship. <a href="https://ko-fi.com/aaroncallinan">Ko-fi</a> · <a href="#" id="footerShare">Share hub</a></p>
+      <p style="margin-top:8px">More projects added as they ship. <a href="https://ko-fi.com/aaroncallinan">Ko-fi</a></p>
     </footer>
   </div>
+
+  <div id="toast" role="status" aria-live="polite"></div>
 
   <div id="qrModal" role="dialog" aria-modal="true" aria-labelledby="qrTitle">
     <div id="qrCard">
@@ -280,7 +307,7 @@
   </div>
 
   <script>
-    const HUB_VER = '1.1.0';
+    const HUB_VER = '1.2.0';
     const HUB_URL = (() => {
       try {
         const u = new URL(location.href);
@@ -504,7 +531,6 @@
     function closeQr() { $('qrModal').classList.remove('open'); }
 
     $('btnShare').addEventListener('click', openQr);
-    $('footerShare').addEventListener('click', e => { e.preventDefault(); openQr(); });
     $('qrClose').addEventListener('click', closeQr);
     $('qrModal').addEventListener('click', e => { if (e.target === $('qrModal')) closeQr(); });
     $('qrCopy').addEventListener('click', async () => {
@@ -519,6 +545,81 @@
         setTimeout(() => { $('qrCopy').textContent = 'Copy link'; }, 1200);
       }
     });
+
+    /* Hub PWA install */
+    const INSTALL_HINT_IOS = 'On iPhone: tap Share, then Add to Home Screen.';
+    let deferredInstallPrompt = null;
+
+    function isStandaloneDisplay() {
+      return !!(window.matchMedia && window.matchMedia('(display-mode: standalone)').matches) ||
+        window.navigator.standalone === true;
+    }
+    function isIosLike() {
+      const ua = navigator.userAgent || '';
+      return /iPad|iPhone|iPod/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+    }
+    function showToast(msg) {
+      const el = $('toast');
+      if (!el) return;
+      el.textContent = msg;
+      el.classList.add('show');
+      clearTimeout(showToast._t);
+      showToast._t = setTimeout(() => el.classList.remove('show'), 3200);
+    }
+    function updateInstallButton() {
+      const btn = $('btnInstall');
+      if (!btn) return;
+      if (isStandaloneDisplay()) {
+        btn.hidden = true;
+        return;
+      }
+      btn.hidden = false;
+      btn.textContent = deferredInstallPrompt
+        ? 'Install this app'
+        : (isIosLike() ? 'Add to Home Screen' : 'Install this app');
+    }
+    async function promptInstallApp() {
+      if (isStandaloneDisplay()) {
+        showToast('Already installed');
+        return;
+      }
+      if (deferredInstallPrompt) {
+        deferredInstallPrompt.prompt();
+        try { await deferredInstallPrompt.userChoice; } catch {}
+        deferredInstallPrompt = null;
+        updateInstallButton();
+        return;
+      }
+      showToast(isIosLike() ? INSTALL_HINT_IOS : 'Use your browser menu → Install app / Add to Home screen');
+    }
+    window.addEventListener('beforeinstallprompt', e => {
+      e.preventDefault();
+      deferredInstallPrompt = e;
+      updateInstallButton();
+    });
+    window.addEventListener('appinstalled', () => {
+      deferredInstallPrompt = null;
+      updateInstallButton();
+      showToast('Installed');
+    });
+    if ($('btnInstall')) {
+      $('btnInstall').addEventListener('click', e => {
+        e.preventDefault();
+        promptInstallApp();
+      });
+    }
+    updateInstallButton();
+
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('./service-worker.js?v=' + HUB_VER).catch(() => {});
+    }
+    try {
+      if (new URLSearchParams(location.search).get('install') === '1') {
+        const tryInstall = () => promptInstallApp();
+        window.addEventListener('beforeinstallprompt', () => setTimeout(tryInstall, 50), { once: true });
+        setTimeout(tryInstall, 600);
+      }
+    } catch {}
 
     document.addEventListener('keydown', e => {
       if (e.key === 'Escape') closeQr();
