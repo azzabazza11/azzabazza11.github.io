@@ -1,0 +1,17 @@
+{
+  "name": "Aaron's Apps",
+  "short_name": "Apps",
+  "description": "Free web apps — creative tools, sports trackers, builder helpers, and more.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#05050c",
+  "theme_color": "#05050c",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
