@@ -304,7 +304,7 @@
   </div>
 
   <script>
-    const HUB_VER = '1.2.1';
+    const HUB_VER = '1.2.2';
     const HUB_URL = (() => {
       try {
         const u = new URL(location.href);
@@ -361,13 +361,15 @@
         id: 'pinballplane',
         title: 'Pinball Plane',
         category: 'Games',
-        desc: 'Arcade pinball meets flight — in development. Watch this space.',
-        accent: '#ff6b9d',
+        desc: '2D pinball built for your phone — tilt nudge, flippers, table editor, physics tweaks. Open in Chrome and Install / Add to Home Screen.',
+        accent: '#3dffa8',
         icon: '🎮',
-        platforms: ['desktop', 'android', 'ios'],
-        status: 'soon',
-        installable: false,
-        tags: ['game', 'pinball']
+        platforms: ['android', 'ios', 'desktop'],
+        status: 'live',
+        installable: true,
+        desktopUrl: 'https://azzabazza11.github.io/pinballplane/',
+        appUrl: 'https://azzabazza11.github.io/pinballplane/',
+        tags: ['game', 'pinball', 'tilt', 'pwa', 'phone']
       }
     ];
 
