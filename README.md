@@ -28,5 +28,6 @@ Edit the `PROJECTS` array in `index.html`:
 - Set `desktopUrl` / `appUrl` (phone entry can differ, e.g. Sphere Circles)
 - Set `installable: true` to show **Install app** on mobile / Android / iOS filters  
   (links to the app with `?install=1` so that origin can run the install prompt)
+- Set `version`: shown as a `v1.2.0` badge on the card (omit if unknown)
 
 The hub picks **Open app** vs desktop entry from the active platform filter and device detection — Android/iOS filters never show a separate desktop-only action.
