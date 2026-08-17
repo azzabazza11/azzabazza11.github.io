@@ -168,6 +168,10 @@
     .badge.android { border-color: rgba(68,255,170,0.3); color: #44ffaa; background: rgba(68,255,170,0.08); }
     .badge.ios { border-color: rgba(255,180,220,0.3); color: #ffb4dc; background: rgba(255,180,220,0.08); }
     .badge.soon { border-color: rgba(255,200,80,0.3); color: #ffc850; background: rgba(255,200,80,0.08); }
+    .badge.version {
+      text-transform: none; letter-spacing: 0.04em;
+      border-color: rgba(255,255,255,0.16); color: #9aa3b2; background: rgba(255,255,255,0.06);
+    }
 
     .card-links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; padding-top: 4px; }
     .card-links a, .card-links span.disabled {
@@ -285,7 +289,7 @@
         <a class="btn" id="btnKofi" href="https://ko-fi.com/aaroncallinan" target="_blank" rel="noopener noreferrer">Support on Ko-fi</a>
       </div>
       <p>Built as single-file HTML apps — fast, private, and easy to share.</p>
-      <p style="margin-top:8px">More projects added as they ship.</p>
+      <p style="margin-top:8px">More projects added as they ship. Hub v<span id="hubVer"></span></p>
     </footer>
   </div>
 
@@ -304,7 +308,7 @@
   </div>
 
   <script>
-    const HUB_VER = '1.2.7';
+    const HUB_VER = '1.2.9';
     const HUB_URL = (() => {
       try {
         const u = new URL(location.href);
@@ -341,6 +345,7 @@
         installable: true,
         desktopUrl: 'https://azzabazza11.github.io/golf-tracker/',
         appUrl: 'https://azzabazza11.github.io/golf-tracker/',
+        version: '1.5.38',
         tags: ['golf', 'gps', 'sports', 'pwa']
       },
       {
@@ -355,6 +360,7 @@
         installable: true,
         desktopUrl: 'https://azzabazza11.github.io/road-speed/',
         appUrl: 'https://azzabazza11.github.io/road-speed/',
+        version: '1.3.2',
         tags: ['speed', 'gps', 'driving', 'pwa', 'phone']
       },
       {
@@ -369,6 +375,7 @@
         installable: true,
         desktopUrl: 'https://azzabazza11.github.io/road-lore/',
         appUrl: 'https://azzabazza11.github.io/road-lore/',
+        version: '1.0.0',
         tags: ['travel', 'gps', 'wikipedia', 'voice', 'pwa', 'phone']
       },
       {
@@ -383,6 +390,7 @@
         installable: true,
         desktopUrl: 'https://azzabazza11.github.io/chippy-helpers/',
         appUrl: 'https://azzabazza11.github.io/chippy-helpers/',
+        version: '1.1.0',
         tags: ['builder', 'level', 'balustrade', 'pwa']
       },
       {
@@ -397,6 +405,7 @@
         installable: true,
         desktopUrl: 'https://azzabazza11.github.io/audio-backup-helper/',
         appUrl: 'https://azzabazza11.github.io/audio-backup-helper/',
+        version: '1.2.0',
         tags: ['audio', 'backup', 'mic', 'pwa', 'phone']
       },
       {
@@ -411,6 +420,7 @@
         installable: false,
         desktopUrl: 'https://azzabazza11.github.io/PhotoStitch/',
         appUrl: 'https://azzabazza11.github.io/PhotoStitch/',
+        version: '30',
         tags: ['stitch', 'screenshots', 'maps', 'desktop']
       },
       {
@@ -425,6 +435,7 @@
         installable: true,
         desktopUrl: 'https://azzabazza11.github.io/photo-slim/',
         appUrl: 'https://azzabazza11.github.io/photo-slim/',
+        version: '1.1.0',
         tags: ['photos', 'compress', 'resize', 'pwa', 'phone']
       },
       {
@@ -439,11 +450,13 @@
         installable: true,
         desktopUrl: 'https://azzabazza11.github.io/pinballplane/',
         appUrl: 'https://azzabazza11.github.io/pinballplane/',
+        version: '1.0.0',
         tags: ['game', 'pinball', 'tilt', 'pwa', 'phone']
       }
     ];
 
     const $ = id => document.getElementById(id);
+    $('hubVer').textContent = HUB_VER;
     let activePlatform = 'all';
     let searchQuery = '';
 
@@ -497,7 +510,7 @@
 
     function matchesSearch(p) {
       if (!searchQuery) return true;
-      const hay = [p.title, p.desc, p.category, ...(p.tags || [])].join(' ').toLowerCase();
+      const hay = [p.title, p.desc, p.category, p.version, ...(p.tags || [])].join(' ').toLowerCase();
       return hay.includes(searchQuery);
     }
 
@@ -531,6 +544,7 @@
           `<span class="badge ${pl}">${pl}</span>`
         ).join('');
         const soonBadge = soon ? '<span class="badge soon">Coming soon</span>' : '';
+        const versionBadge = p.version ? `<span class="badge version">v${p.version}</span>` : '';
         const actions = linksFor(p);
 
         let links = '';
@@ -540,7 +554,7 @@
           links = '<span class="disabled">No link</span>';
         } else {
           links = actions.map(l =>
-            `<a href="${l.url}" class="${l.secondary ? 'secondary' : ''}">${l.label}</a>`
+            `<a href="${l.url}" target="_blank" rel="noopener noreferrer" class="${l.secondary ? 'secondary' : ''}">${l.label}</a>`
           ).join('');
         }
 
@@ -554,7 +568,7 @@
               </div>
             </div>
             <p>${p.desc}</p>
-            <div class="badges">${badges}${soonBadge}</div>
+            <div class="badges">${badges}${soonBadge}${versionBadge}</div>
             <div class="card-links">${links}</div>
           </article>`;
       }).join('');

@@ -1,4 +1,4 @@
-const CACHE = 'apps-hub-v1.2.7';
+const CACHE = 'apps-hub-v1.2.9';
 const ASSETS = [
   './',
   './index.html',
@@ -6,6 +6,15 @@ const ASSETS = [
   './icon.svg',
   './service-worker.js'
 ];
+
+function isHubPath(pathname) {
+  const p = pathname.replace(/\/+$/, '') || '/';
+  return p === '/' ||
+    p === '/index.html' ||
+    p === '/manifest.webmanifest' ||
+    p === '/icon.svg' ||
+    p === '/service-worker.js';
+}
 
 self.addEventListener('install', event => {
   event.waitUntil(
@@ -23,6 +32,10 @@ self.addEventListener('activate', event => {
 
 self.addEventListener('fetch', event => {
   if (event.request.method !== 'GET') return;
+  const url = new URL(event.request.url);
+  if (url.origin !== self.location.origin) return;
+  if (!isHubPath(url.pathname)) return;
+
   event.respondWith(
     fetch(event.request)
       .then(res => {
