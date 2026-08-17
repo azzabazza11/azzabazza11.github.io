@@ -1,48 +1,17 @@
-const CACHE = 'apps-hub-v1.2.9';
-const ASSETS = [
-  './',
-  './index.html',
-  './manifest.webmanifest',
-  './icon.svg',
-  './service-worker.js'
-];
-
-function isHubPath(pathname) {
-  const p = pathname.replace(/\/+$/, '') || '/';
-  return p === '/' ||
-    p === '/index.html' ||
-    p === '/manifest.webmanifest' ||
-    p === '/icon.svg' ||
-    p === '/service-worker.js';
-}
-
+// Retired root SW: old hub installs used scope "/" and blocked child PWAs.
+// Unregister so /chippy-helpers/, /photo-slim/, etc. can install on their own.
 self.addEventListener('install', event => {
-  event.waitUntil(
-    caches.open(CACHE).then(c => c.addAll(ASSETS)).then(() => self.skipWaiting())
-  );
+  self.skipWaiting();
 });
 
 self.addEventListener('activate', event => {
-  event.waitUntil(
-    caches.keys().then(keys =>
-      Promise.all(keys.filter(k => k !== CACHE).map(k => caches.delete(k)))
-    ).then(() => self.clients.claim())
-  );
-});
-
-self.addEventListener('fetch', event => {
-  if (event.request.method !== 'GET') return;
-  const url = new URL(event.request.url);
-  if (url.origin !== self.location.origin) return;
-  if (!isHubPath(url.pathname)) return;
-
-  event.respondWith(
-    fetch(event.request)
-      .then(res => {
-        const copy = res.clone();
-        caches.open(CACHE).then(c => c.put(event.request, copy));
-        return res;
-      })
-      .catch(() => caches.match(event.request).then(r => r || caches.match('./index.html')))
-  );
+  event.waitUntil((async () => {
+    const keys = await caches.keys();
+    await Promise.all(keys.map(k => caches.delete(k)));
+    await self.registration.unregister();
+    const clients = await self.clients.matchAll({ type: 'window' });
+    for (const client of clients) {
+      try { client.navigate(client.url); } catch (_) {}
+    }
+  })());
 });

@@ -3,15 +3,15 @@
   "name": "Aaron's Apps",
   "short_name": "Apps",
   "description": "Catalog of free web apps — install each tool separately from its own page.",
-  "start_url": "/apps/index.html?app=hub",
-  "scope": "/apps/",
+  "start_url": "./index.html?app=hub",
+  "scope": "./",
   "display": "standalone",
   "orientation": "any",
   "background_color": "#05050c",
   "theme_color": "#05050c",
   "icons": [
     {
-      "src": "/apps/icon.svg",
+      "src": "./icon.svg",
       "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "any maskable"
