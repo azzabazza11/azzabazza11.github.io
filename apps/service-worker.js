@@ -1,4 +1,4 @@
-const CACHE = 'apps-hub-v1.3.6';
+const CACHE = 'apps-hub-v1.4.1';
 const ASSETS = [
   './',
   './index.html',
