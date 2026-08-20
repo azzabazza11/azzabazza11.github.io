@@ -1,6 +1,6 @@
 {
   "hub": "Aaron's Apps",
-  "syncedAt": "2026-08-20T09:00:11Z",
+  "syncedAt": "2026-08-20T09:03:44Z",
   "source": "camp-mother",
   "ok": 9,
   "iconsOk": 8,
@@ -145,7 +145,7 @@
       "installable": true,
       "desktopUrl": "https://azzabazza11.github.io/road-lore/",
       "appUrl": "https://azzabazza11.github.io/road-lore/",
-      "version": "1.3.6",
+      "version": "1.7.1",
       "tags": [
         "travel",
         "gps",
@@ -158,6 +158,21 @@
       ],
       "changelog": [
         {
+          "version": "1.7.1",
+          "date": "2026-08-20",
+          "notes": "Replace install PNGs with Passenger Tales road icon."
+        },
+        {
+          "version": "1.7.0",
+          "date": "2026-08-20",
+          "notes": "Phase 3 admin OSM map of shared clips."
+        },
+        {
+          "version": "1.6.0",
+          "date": "2026-08-20",
+          "notes": "Phase 2 shared nearby clip library."
+        },
+        {
           "version": "1.3.6",
           "date": "2026-08-19",
           "notes": "Make More apps a share-sheet button and drop the home share icon."
@@ -168,9 +183,8 @@
           "notes": "Let Pages use Gemini by calling Cloud Run."
         }
       ],
-      "issues": [
-        "hub.json version 1.3.6 != APP_VER 1.7.1"
-      ],
+      "issues": [],
+      "iconPath": "icon.svg",
       "iconUrl": "./icons/road-lore.svg",
       "codeVersion": "1.7.1"
     },
