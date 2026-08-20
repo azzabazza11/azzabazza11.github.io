@@ -1,6 +1,6 @@
 {
   "hub": "Aaron's Apps",
-  "syncedAt": "2026-08-20T09:03:44Z",
+  "syncedAt": "2026-08-20T09:49:11Z",
   "source": "camp-mother",
   "ok": 9,
   "iconsOk": 8,
@@ -24,13 +24,28 @@
       "installable": true,
       "desktopUrl": "https://azzabazza11.github.io/sphere-circles/",
       "appUrl": "https://azzabazza11.github.io/sphere-circles/screensaver.html",
-      "version": "1.6.20",
+      "version": "1.6.23",
       "tags": [
         "animation",
         "phone",
         "pwa"
       ],
       "changelog": [
+        {
+          "version": "1.6.23",
+          "date": "2026-08-20",
+          "notes": "Full 360\u00b0 Orbit with a soft pitch rock; long-press Orbit for multi-axis dance speeds."
+        },
+        {
+          "version": "1.6.22",
+          "date": "2026-08-20",
+          "notes": "Toggle circle strokes off in Look, leaving dots when Dots is on."
+        },
+        {
+          "version": "1.6.21",
+          "date": "2026-08-20",
+          "notes": "Put Circles and Phase first in the Motion dock sheet."
+        },
         {
           "version": "1.6.20",
           "date": "2026-08-17",
@@ -43,8 +58,9 @@
         }
       ],
       "issues": [],
+      "iconPath": "icon.svg",
       "iconUrl": "./icons/sphere-circles.svg",
-      "codeVersion": "1.6.20"
+      "codeVersion": "1.6.23"
     },
     {
       "id": "golf-tracker",
