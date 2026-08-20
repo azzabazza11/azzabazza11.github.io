@@ -1,6 +1,6 @@
 {
   "hub": "Aaron's Apps",
-  "syncedAt": "2026-08-20T10:07:40Z",
+  "syncedAt": "2026-08-20T10:08:23Z",
   "source": "camp-mother",
   "ok": 9,
   "iconsOk": 8,
@@ -282,10 +282,10 @@
         }
       ],
       "issues": [
-        "hub.json version 1.2.1 != APP_VER 1.5.6"
+        "hub.json version 1.2.1 != APP_VER 1.6.4"
       ],
       "iconUrl": "./icons/audio-backup-helper.svg",
-      "codeVersion": "1.5.6"
+      "codeVersion": "1.6.4"
     },
     {
       "id": "photostitch",
