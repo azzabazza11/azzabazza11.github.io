@@ -1,6 +1,6 @@
 {
   "hub": "Aaron's Apps",
-  "syncedAt": "2026-08-20T10:51:11Z",
+  "syncedAt": "2026-08-20T11:03:59Z",
   "source": "camp-mother",
   "ok": 9,
   "iconsOk": 8,
@@ -264,7 +264,7 @@
       "installable": true,
       "desktopUrl": "https://azzabazza11.github.io/audio-backup-helper/",
       "appUrl": "https://azzabazza11.github.io/audio-backup-helper/",
-      "version": "1.2.1",
+      "version": "1.6.4",
       "tags": [
         "audio",
         "backup",
@@ -273,6 +273,11 @@
         "phone"
       ],
       "changelog": [
+        {
+          "version": "1.6.4",
+          "date": "2026-08-20",
+          "notes": "More reliable lock pipeline; Play track and Reset session; backing-mode seek/mute/volume."
+        },
         {
           "version": "1.2.1",
           "date": "2026-08-17",
@@ -284,9 +289,7 @@
           "notes": "Show app version in the UI; match sync on speech bursts."
         }
       ],
-      "issues": [
-        "hub.json version 1.2.1 != APP_VER 1.6.4"
-      ],
+      "issues": [],
       "iconPath": "icon.svg",
       "iconUrl": "./icons/audio-backup-helper.svg",
       "codeVersion": "1.6.4"
