@@ -1,6 +1,6 @@
 {
   "hub": "Aaron's Apps",
-  "syncedAt": "2026-08-20T22:42:59Z",
+  "syncedAt": "2026-08-20T22:45:12Z",
   "source": "camp-mother",
   "ok": 9,
   "iconsOk": 8,
@@ -110,7 +110,7 @@
       "branch": "main",
       "title": "Road Speed",
       "category": "Tools",
-      "desc": "GPS speedometer with sticky set limits along a route, mapped zones from earlier trips, tax logbook, and a casual overspeed ding.",
+      "desc": "GPS speedometer that listens for road motion, auto-logs journeys, sticky speed limits, and a casual overspeed ding.",
       "accent": "#3dd6c6",
       "icon": "\u23f1",
       "platforms": [
@@ -121,7 +121,7 @@
       "installable": true,
       "desktopUrl": "https://azzabazza11.github.io/road-speed/",
       "appUrl": "https://azzabazza11.github.io/road-speed/",
-      "version": "1.4.0",
+      "version": "1.5.0",
       "tags": [
         "speed",
         "gps",
@@ -130,6 +130,11 @@
         "phone"
       ],
       "changelog": [
+        {
+          "version": "1.5.0",
+          "date": "2026-08-21",
+          "notes": "Simplify drive UI: auto listen above 10 km/h, auto start/end journeys; Set limit and avg zone stay manual."
+        },
         {
           "version": "1.4.0",
           "date": "2026-08-21",
@@ -149,7 +154,7 @@
       "issues": [],
       "iconPath": "icon.svg",
       "iconUrl": "./icons/road-speed.svg",
-      "codeVersion": "1.4.0"
+      "codeVersion": "1.5.0"
     },
     {
       "id": "road-lore",
