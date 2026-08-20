@@ -14,7 +14,7 @@
   <title>Aaron's Apps — Web tools &amp; experiments</title>
   <style>
     *, *::before, *::after { margin: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; }l
+    html { scroll-behavior: smooth; }
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
       *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
@@ -807,8 +807,12 @@
         const el = $('campStatus');
         if (el) {
           const drift = data.apps.filter(a => a.issues && a.issues.length).length;
+          const icons = data.iconsOk != null
+            ? ` · <span>${data.iconsOk}</span> icons`
+            : '';
           el.innerHTML = `Camp mother last synced <span>${data.syncedAt || 'just now'}</span>`
             + ` · <span>${data.ok}/${data.total}</span> manifests`
+            + icons
             + (drift ? ` · <span>${drift} need a check</span>` : '');
         }
         renderCards();
