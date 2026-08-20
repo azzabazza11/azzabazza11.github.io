@@ -1,0 +1,60 @@
+{
+  "owner": "azzabazza11",
+  "hubRepo": "azzabazza11.github.io",
+  "apps": [
+    {
+      "id": "sphere-circles",
+      "repo": "sphere-circles",
+      "branch": "main",
+      "versionFiles": ["screensaver.html", "index.html"]
+    },
+    {
+      "id": "golf-tracker",
+      "repo": "golf-tracker",
+      "branch": "master",
+      "versionFiles": ["index.html"]
+    },
+    {
+      "id": "road-speed",
+      "repo": "road-speed",
+      "branch": "main",
+      "versionFiles": ["index.html"]
+    },
+    {
+      "id": "road-lore",
+      "repo": "road-lore",
+      "branch": "main",
+      "versionFiles": ["index.html"]
+    },
+    {
+      "id": "chippy-helpers",
+      "repo": "chippy-helpers",
+      "branch": "master",
+      "versionFiles": ["index.html"]
+    },
+    {
+      "id": "audio-backup-helper",
+      "repo": "audio-backup-helper",
+      "branch": "main",
+      "versionFiles": ["index.html"]
+    },
+    {
+      "id": "photostitch",
+      "repo": "PhotoStitch",
+      "branch": "main",
+      "versionFiles": ["app.js"]
+    },
+    {
+      "id": "photo-slim",
+      "repo": "photo-slim",
+      "branch": "master",
+      "versionFiles": ["index.html"]
+    },
+    {
+      "id": "pinballplane",
+      "repo": "pinballplane",
+      "branch": "main",
+      "versionFiles": ["index.html"]
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+# Optional: copy to an app repo as .github/workflows/notify-hub.yml
+# Requires the same HUB_SYNC_TOKEN PAT (repo scope) on that app repo.
+name: Notify camp mother
+on:
+  push:
+    paths: [hub.json]
+    branches: [main, master]
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dispatch hub-sync
+        env:
+          GH_TOKEN: ${{ secrets.HUB_SYNC_TOKEN }}
+        run: |
+          if [ -z "$GH_TOKEN" ]; then echo "No HUB_SYNC_TOKEN on this repo; hub will poll hourly."; exit 0; fi
+          gh api -X POST repos/azzabazza11/azzabazza11.github.io/dispatches -f event_type=hub-sync
