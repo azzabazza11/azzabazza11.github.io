@@ -1,6 +1,6 @@
 {
   "hub": "Aaron's Apps",
-  "syncedAt": "2026-08-20T10:08:23Z",
+  "syncedAt": "2026-08-20T10:15:15Z",
   "source": "camp-mother",
   "ok": 9,
   "iconsOk": 8,
@@ -100,6 +100,7 @@
         }
       ],
       "issues": [],
+      "iconPath": "app-icon.svg",
       "iconUrl": "./icons/golf-tracker.svg",
       "codeVersion": "1.5.39"
     },
@@ -141,6 +142,7 @@
         }
       ],
       "issues": [],
+      "iconPath": "icon.svg",
       "iconUrl": "./icons/road-speed.svg",
       "codeVersion": "1.3.3"
     },
@@ -241,6 +243,7 @@
         }
       ],
       "issues": [],
+      "iconPath": "icon.svg",
       "iconUrl": "./icons/chippy-helpers.svg",
       "codeVersion": "1.2.0"
     },
@@ -284,6 +287,7 @@
       "issues": [
         "hub.json version 1.2.1 != APP_VER 1.6.4"
       ],
+      "iconPath": "icon.svg",
       "iconUrl": "./icons/audio-backup-helper.svg",
       "codeVersion": "1.6.4"
     },
@@ -359,6 +363,7 @@
         }
       ],
       "issues": [],
+      "iconPath": "icon.svg",
       "iconUrl": "./icons/photo-slim.svg",
       "codeVersion": "1.1.2"
     },
@@ -401,6 +406,7 @@
         }
       ],
       "issues": [],
+      "iconPath": "icon.svg",
       "iconUrl": "./icons/pinballplane.svg",
       "codeVersion": "1.0.1"
     }
