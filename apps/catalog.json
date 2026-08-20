@@ -1,6 +1,6 @@
 {
   "hub": "Aaron's Apps",
-  "syncedAt": "2026-08-20T11:03:59Z",
+  "syncedAt": "2026-08-20T11:13:15Z",
   "source": "camp-mother",
   "ok": 9,
   "iconsOk": 8,
@@ -163,7 +163,7 @@
       "installable": true,
       "desktopUrl": "https://azzabazza11.github.io/road-lore/",
       "appUrl": "https://azzabazza11.github.io/road-lore/",
-      "version": "1.7.1",
+      "version": "1.7.2",
       "tags": [
         "travel",
         "gps",
@@ -175,6 +175,11 @@
         "phone"
       ],
       "changelog": [
+        {
+          "version": "1.7.2",
+          "date": "2026-08-20",
+          "notes": "Bigger admin-map pins that scale with zoom; lock versions to Aaron's Apps camp mother."
+        },
         {
           "version": "1.7.1",
           "date": "2026-08-20",
@@ -204,7 +209,7 @@
       "issues": [],
       "iconPath": "icon.svg",
       "iconUrl": "./icons/road-lore.svg",
-      "codeVersion": "1.7.1"
+      "codeVersion": "1.7.2"
     },
     {
       "id": "chippy-helpers",
