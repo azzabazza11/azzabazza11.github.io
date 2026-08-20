@@ -23,20 +23,20 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Pull hub.json from each app repo
+      - name: Pull hub.json + PWA icons from each app repo
         env:
           HUB_SYNC_TOKEN: ${{ secrets.HUB_SYNC_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python3 scripts/sync-catalog.py
         continue-on-error: true
-      - name: Commit catalog if it changed
+      - name: Commit catalog + icons if they changed
         run: |
           git config user.name "camp-mother"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add apps/catalog.json
+          git add apps/catalog.json apps/icons/
           if git diff --staged --quiet; then
             echo "Catalog already current."
           else
-            git commit -m "Sync app catalog from hub.json manifests."
+            git commit -m "Sync app catalog and PWA icons from hub manifests."
             git push
           fi

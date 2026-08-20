@@ -6,37 +6,43 @@
       "id": "sphere-circles",
       "repo": "sphere-circles",
       "branch": "main",
-      "versionFiles": ["screensaver.html", "index.html"]
+      "versionFiles": ["screensaver.html", "index.html"],
+      "iconPath": "icon.svg"
     },
     {
       "id": "golf-tracker",
       "repo": "golf-tracker",
       "branch": "master",
-      "versionFiles": ["index.html"]
+      "versionFiles": ["index.html"],
+      "iconPath": "app-icon.svg"
     },
     {
       "id": "road-speed",
       "repo": "road-speed",
       "branch": "main",
-      "versionFiles": ["index.html"]
+      "versionFiles": ["index.html"],
+      "iconPath": "icon.svg"
     },
     {
       "id": "road-lore",
       "repo": "road-lore",
       "branch": "main",
-      "versionFiles": ["index.html"]
+      "versionFiles": ["index.html"],
+      "iconPath": "icon.svg"
     },
     {
       "id": "chippy-helpers",
       "repo": "chippy-helpers",
       "branch": "master",
-      "versionFiles": ["index.html"]
+      "versionFiles": ["index.html"],
+      "iconPath": "icon.svg"
     },
     {
       "id": "audio-backup-helper",
       "repo": "audio-backup-helper",
       "branch": "main",
-      "versionFiles": ["index.html"]
+      "versionFiles": ["index.html"],
+      "iconPath": "icon.svg"
     },
     {
       "id": "photostitch",
@@ -48,13 +54,15 @@
       "id": "photo-slim",
       "repo": "photo-slim",
       "branch": "master",
-      "versionFiles": ["index.html"]
+      "versionFiles": ["index.html"],
+      "iconPath": "icon.svg"
     },
     {
       "id": "pinballplane",
       "repo": "pinballplane",
       "branch": "main",
-      "versionFiles": ["index.html"]
+      "versionFiles": ["index.html"],
+      "iconPath": "icon.svg"
     }
   ]
 }

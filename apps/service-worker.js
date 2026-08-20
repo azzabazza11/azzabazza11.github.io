@@ -1,4 +1,4 @@
-const CACHE = 'apps-hub-v1.4.2';
+const CACHE = 'apps-hub-v1.5.0';
 const ASSETS = [
   './',
   './index.html',
@@ -7,9 +7,28 @@ const ASSETS = [
   './icon.svg'
 ];
 
+async function iconAssets() {
+  try {
+    const res = await fetch('./catalog.json', { cache: 'no-store' });
+    if (!res.ok) return [];
+    const data = await res.json();
+    const urls = (data.apps || [])
+      .map(a => a.iconUrl)
+      .filter(Boolean);
+    return [...new Set(urls)];
+  } catch {
+    return [];
+  }
+}
+
 self.addEventListener('install', event => {
   event.waitUntil(
-    caches.open(CACHE).then(c => c.addAll(ASSETS)).then(() => self.skipWaiting())
+    (async () => {
+      const cache = await caches.open(CACHE);
+      const icons = await iconAssets();
+      await cache.addAll([...ASSETS, ...icons]);
+      await self.skipWaiting();
+    })()
   );
 });
 

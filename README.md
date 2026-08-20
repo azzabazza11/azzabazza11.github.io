@@ -8,11 +8,25 @@ If an older “Aaron’s Apps” shortcut was installed from the site root, unin
 
 ## Camp mother
 
-The hub is the source of truth for **what ships**. Each app keeps a `hub.json` in its own repo (version, description, changelog). A GitHub Action on this repo pulls those files every hour (and on demand), checks them against `APP_VER` in the app source, and writes `apps/catalog.json`.
+The hub is the source of truth for **what ships**. Each app keeps a `hub.json` in its own repo (version, description, changelog, and optional PWA icon path). A GitHub Action on this repo pulls those files every hour (and on demand), checks them against `APP_VER` in the app source, copies one icon per app into `apps/icons/`, and writes `apps/catalog.json`.
 
-### One-time: repo secret
+### `hub.json` fields
 
-Create a **classic PAT** with `repo` scope (or a fine-grained token with **Contents: Read** on every app repo). Then:
+| Field | Required | Notes |
+| --- | --- | --- |
+| `title`, `version`, `desc`, … | yes | Card metadata (see any existing app). |
+| `icon` | yes | Emoji fallback for the hub card. |
+| `iconPath` | optional | Path in the app repo to the primary PWA icon (**prefer SVG**, e.g. `icon.svg` or `app-icon.svg`). |
+| `icons` | optional | Array of icon paths; camp mother prefers `.svg`, then PNG. |
+
+Camp mother saves the chosen file as `apps/icons/{id}.svg` (or `.png`) and sets `iconUrl: "./icons/{id}.ext"` on the catalog entry. Hub cards use the image when present, otherwise the emoji.
+
+You can also set `iconPath` on an entry in `apps/registry.json` if the app has no `hub.json` field yet.
+
+### One-time: enable the Action + repo secret
+
+1. Copy `templates/sync-catalog.yml` to `.github/workflows/sync-catalog.yml` (needs a GitHub token with the `workflow` scope, or add the file in the GitHub UI).
+2. Create a **classic PAT** with `repo` scope (or a fine-grained token with **Contents: Read** on every app repo). Then:
 
 ```bash
 gh secret set HUB_SYNC_TOKEN -R azzabazza11/azzabazza11.github.io
@@ -31,8 +45,8 @@ gh api -X POST repos/azzabazza11/azzabazza11.github.io/dispatches \
 
 ### Adding a new app
 
-1. Add `hub.json` to the app repo (copy any existing one).
+1. Add `hub.json` to the app repo (copy any existing one). Include `iconPath` pointing at your SVG (or PNG) PWA icon.
 2. Register it in `apps/registry.json`.
-3. Ship. Camp mother will pick it up on the next sync.
+3. Ship. Camp mother will pick it up on the next sync (metadata + icon).
 
 Keep `hub.json` `version` identical to `APP_VER` / `APP_VERSION` in the app.
