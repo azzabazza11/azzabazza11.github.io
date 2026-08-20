@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Back Me Up">
+  <rect width="512" height="512" rx="96" fill="#f3f0e8"/>
+  <path d="M128 320V192c0-8 6-14 14-14h28c8 0 14 6 14 14v128c0 8-6 14-14 14h-28c-8 0-14-6-14-14z" fill="#123c32"/>
+  <path d="M192 352V160c0-8 6-14 14-14h28c8 0 14 6 14 14v192c0 8-6 14-14 14h-28c-8 0-14-6-14-14z" fill="#123c32"/>
+  <path d="M256 288V224c0-8 6-14 14-14h28c8 0 14 6 14 14v64c0 8-6 14-14 14h-28c-8 0-14-6-14-14z" fill="#123c32"/>
+  <path d="M320 336V176c0-8 6-14 14-14h28c8 0 14 6 14 14v160c0 8-6 14-14 14h-28c-8 0-14-6-14-14z" fill="#123c32"/>
+  <path d="M360 120c44 24 72 72 72 128s-28 104-72 128" fill="none" stroke="#123c32" stroke-width="28" stroke-linecap="round"/>
+  <path d="M96 380h320l48 48H48z" fill="#123c32" opacity="0.15"/>
+  <path d="M96 380h320v24c0 8-6 14-14 14H110c-8 0-14-6-14-14v-24z" fill="#123c32"/>
+</svg>

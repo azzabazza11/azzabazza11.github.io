@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <radialGradient id="bg" cx="32%" cy="28%" r="80%">
+      <stop offset="0%" stop-color="#3ad17e"/>
+      <stop offset="100%" stop-color="#0f5f36"/>
+    </radialGradient>
+    <radialGradient id="ball" cx="34%" cy="28%" r="70%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="60%" stop-color="#efefef"/>
+      <stop offset="100%" stop-color="#b8b8b8"/>
+    </radialGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
+  <circle cx="256" cy="256" r="150" fill="url(#ball)"/>
+  <ellipse cx="214" cy="205" rx="42" ry="28" fill="#ffffff" opacity="0.72"/>
+  <g fill="#cfcfcf" opacity="0.65">
+    <circle cx="192" cy="174" r="8"/><circle cx="233" cy="164" r="8"/><circle cx="275" cy="168" r="8"/><circle cx="317" cy="184" r="8"/>
+    <circle cx="174" cy="214" r="8"/><circle cx="218" cy="208" r="8"/><circle cx="260" cy="205" r="8"/><circle cx="302" cy="212" r="8"/><circle cx="340" cy="231" r="8"/>
+    <circle cx="171" cy="259" r="8"/><circle cx="214" cy="252" r="8"/><circle cx="256" cy="248" r="8"/><circle cx="298" cy="255" r="8"/><circle cx="339" cy="273" r="8"/>
+    <circle cx="186" cy="304" r="8"/><circle cx="227" cy="296" r="8"/><circle cx="269" cy="294" r="8"/><circle cx="311" cy="303" r="8"/>
+    <circle cx="215" cy="342" r="8"/><circle cx="256" cy="336" r="8"/><circle cx="296" cy="342" r="8"/>
+  </g>
+</svg>
