@@ -1,6 +1,6 @@
 {
   "hub": "Aaron's Apps",
-  "syncedAt": "2026-08-20T22:33:53Z",
+  "syncedAt": "2026-08-20T22:41:31Z",
   "source": "camp-mother",
   "ok": 9,
   "iconsOk": 8,
@@ -168,7 +168,7 @@
       "installable": true,
       "desktopUrl": "https://azzabazza11.github.io/road-lore/",
       "appUrl": "https://azzabazza11.github.io/road-lore/",
-      "version": "1.7.2",
+      "version": "1.8.0",
       "tags": [
         "travel",
         "gps",
@@ -180,6 +180,11 @@
         "phone"
       ],
       "changelog": [
+        {
+          "version": "1.8.0",
+          "date": "2026-08-20",
+          "notes": "Random Gemini voice option; auto voice preview with on-phone sample cache; remove Test voice button."
+        },
         {
           "version": "1.7.2",
           "date": "2026-08-20",
@@ -214,7 +219,7 @@
       "issues": [],
       "iconPath": "icon.svg",
       "iconUrl": "./icons/road-lore.svg",
-      "codeVersion": "1.7.2"
+      "codeVersion": "1.8.0"
     },
     {
       "id": "chippy-helpers",
