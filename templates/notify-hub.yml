@@ -1,5 +1,6 @@
 # Optional: copy to an app repo as .github/workflows/notify-hub.yml
-# Requires the same HUB_SYNC_TOKEN PAT (repo scope) on that app repo.
+# Uses HUB_SYNC_TOKEN or HUB_TOKEN (classic PAT with repo scope). Without either,
+# camp mother still picks up hub.json on its hourly poll.
 name: Notify camp mother
 on:
   push:
@@ -11,7 +12,11 @@ jobs:
     steps:
       - name: Dispatch hub-sync
         env:
-          GH_TOKEN: ${{ secrets.HUB_SYNC_TOKEN }}
+          GH_TOKEN: ${{ secrets.HUB_SYNC_TOKEN || secrets.HUB_TOKEN }}
         run: |
-          if [ -z "$GH_TOKEN" ]; then echo "No HUB_SYNC_TOKEN on this repo; hub will poll hourly."; exit 0; fi
-          gh api -X POST repos/azzabazza11/azzabazza11.github.io/dispatches -f event_type=hub-sync
+          if [ -z "$GH_TOKEN" ]; then
+            echo "No HUB_SYNC_TOKEN / HUB_TOKEN on this repo; hub will poll hourly."
+            exit 0
+          fi
+          gh api -X POST repos/azzabazza11/azzabazza11.github.io/dispatches \
+            -f event_type=hub-sync

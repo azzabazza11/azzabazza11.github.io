@@ -50,3 +50,12 @@ gh api -X POST repos/azzabazza11/azzabazza11.github.io/dispatches \
 3. Ship. Camp mother will pick it up on the next sync (metadata + icon).
 
 Keep `hub.json` `version` identical to `APP_VER` / `APP_VERSION` in the app.
+
+### Agent setup (every app repo)
+
+Paste the prompt in `templates/agent-hub-version-lock.md` into each app’s Cursor agent once. It installs:
+
+- `.cursor/rules/hub-camp-mother.mdc` — always bump `APP_VER` and `hub.json` together
+- `.github/workflows/notify-hub.yml` — ping camp mother when `hub.json` changes
+
+Also copy `templates/hub-camp-mother.mdc` and `templates/notify-hub.yml` if you prefer doing it by hand.
