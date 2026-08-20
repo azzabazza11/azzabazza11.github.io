@@ -1,6 +1,6 @@
 {
   "hub": "Aaron's Apps",
-  "syncedAt": "2026-08-20T09:49:11Z",
+  "syncedAt": "2026-08-20T10:07:40Z",
   "source": "camp-mother",
   "ok": 9,
   "iconsOk": 8,
@@ -24,13 +24,23 @@
       "installable": true,
       "desktopUrl": "https://azzabazza11.github.io/sphere-circles/",
       "appUrl": "https://azzabazza11.github.io/sphere-circles/screensaver.html",
-      "version": "1.6.23",
+      "version": "1.6.25",
       "tags": [
         "animation",
         "phone",
         "pwa"
       ],
       "changelog": [
+        {
+          "version": "1.6.25",
+          "date": "2026-08-20",
+          "notes": "Save Flow snapshots; with 2+ snaps Auto flow morphs between them instead of sparse random wander."
+        },
+        {
+          "version": "1.6.24",
+          "date": "2026-08-20",
+          "notes": "In fullscreen, a floating stick pops up every minute or two so you can try hold-drag."
+        },
         {
           "version": "1.6.23",
           "date": "2026-08-20",
@@ -45,22 +55,12 @@
           "version": "1.6.21",
           "date": "2026-08-20",
           "notes": "Put Circles and Phase first in the Motion dock sheet."
-        },
-        {
-          "version": "1.6.20",
-          "date": "2026-08-17",
-          "notes": "Fix PWA install when opened from Aaron's Apps hub."
-        },
-        {
-          "version": "1.6.19",
-          "date": "2026-08-15",
-          "notes": "Idle play wall dashes and unwrap tricks so the flock can lunge, peel open, and wind back into a sphere."
         }
       ],
       "issues": [],
       "iconPath": "icon.svg",
       "iconUrl": "./icons/sphere-circles.svg",
-      "codeVersion": "1.6.23"
+      "codeVersion": "1.6.25"
     },
     {
       "id": "golf-tracker",
