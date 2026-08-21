@@ -1,6 +1,6 @@
 {
   "hub": "Aaron's Apps",
-  "syncedAt": "2026-08-21T10:00:51Z",
+  "syncedAt": "2026-08-21T10:12:29Z",
   "source": "camp-mother",
   "ok": 9,
   "iconsOk": 8,
@@ -330,7 +330,7 @@
       "installable": true,
       "desktopUrl": "https://azzabazza11.github.io/audio-backup-helper/",
       "appUrl": "https://azzabazza11.github.io/audio-backup-helper/",
-      "version": "1.6.9",
+      "version": "1.6.10",
       "tags": [
         "audio",
         "pwa",
@@ -339,6 +339,11 @@
         "fingerprint"
       ],
       "changelog": [
+        {
+          "version": "1.6.10",
+          "date": "2026-08-21",
+          "notes": "Reject far teleport hits; gap-seed only near clock; proximity-biased tile ranking (log #1 fix)"
+        },
         {
           "version": "1.6.9",
           "date": "2026-08-21",
@@ -393,7 +398,7 @@
       "issues": [],
       "iconPath": "icon.svg",
       "iconUrl": "./icons/audio-backup-helper.svg",
-      "codeVersion": "1.6.9"
+      "codeVersion": "1.6.10"
     },
     {
       "id": "photostitch",
