@@ -1,6 +1,6 @@
 {
   "hub": "Aaron's Apps",
-  "syncedAt": "2026-08-21T01:56:13Z",
+  "syncedAt": "2026-08-21T03:14:38Z",
   "source": "camp-mother",
   "ok": 9,
   "iconsOk": 8,
@@ -80,7 +80,7 @@
       "installable": true,
       "desktopUrl": "https://azzabazza11.github.io/golf-tracker/",
       "appUrl": "https://azzabazza11.github.io/golf-tracker/",
-      "version": "1.5.41",
+      "version": "1.5.43",
       "tags": [
         "golf",
         "gps",
@@ -88,6 +88,16 @@
         "pwa"
       ],
       "changelog": [
+        {
+          "version": "1.5.43",
+          "date": "2026-08-21",
+          "notes": "Settle/arm stays quiet until you walk Min shot move away from the last mark or tee."
+        },
+        {
+          "version": "1.5.42",
+          "date": "2026-08-21",
+          "notes": "Walk to next tee is tappable to set tee GPS and line up the map on a first round."
+        },
         {
           "version": "1.5.41",
           "date": "2026-08-21",
@@ -112,7 +122,7 @@
       "issues": [],
       "iconPath": "app-icon.svg",
       "iconUrl": "./icons/golf-tracker.svg",
-      "codeVersion": "1.5.41"
+      "codeVersion": "1.5.43"
     },
     {
       "id": "road-speed",
