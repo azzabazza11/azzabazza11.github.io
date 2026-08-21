@@ -1,6 +1,6 @@
 {
   "hub": "Aaron's Apps",
-  "syncedAt": "2026-08-21T00:48:17Z",
+  "syncedAt": "2026-08-21T01:56:13Z",
   "source": "camp-mother",
   "ok": 9,
   "iconsOk": 8,
@@ -80,7 +80,7 @@
       "installable": true,
       "desktopUrl": "https://azzabazza11.github.io/golf-tracker/",
       "appUrl": "https://azzabazza11.github.io/golf-tracker/",
-      "version": "1.5.39",
+      "version": "1.5.41",
       "tags": [
         "golf",
         "gps",
@@ -88,6 +88,16 @@
         "pwa"
       ],
       "changelog": [
+        {
+          "version": "1.5.41",
+          "date": "2026-08-21",
+          "notes": "Jump to Hole sticks instead of snapping back to the nearest mapped tee."
+        },
+        {
+          "version": "1.5.40",
+          "date": "2026-08-21",
+          "notes": "Long-press Set tee maps GPS without starting the hole; auto-mark can fire after first tee-off."
+        },
         {
           "version": "1.5.39",
           "date": "2026-08-17",
@@ -102,7 +112,7 @@
       "issues": [],
       "iconPath": "app-icon.svg",
       "iconUrl": "./icons/golf-tracker.svg",
-      "codeVersion": "1.5.39"
+      "codeVersion": "1.5.41"
     },
     {
       "id": "road-speed",
