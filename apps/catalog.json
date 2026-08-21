@@ -1,6 +1,6 @@
 {
   "hub": "Aaron's Apps",
-  "syncedAt": "2026-08-21T09:51:08Z",
+  "syncedAt": "2026-08-21T10:00:51Z",
   "source": "camp-mother",
   "ok": 9,
   "iconsOk": 8,
@@ -330,7 +330,7 @@
       "installable": true,
       "desktopUrl": "https://azzabazza11.github.io/audio-backup-helper/",
       "appUrl": "https://azzabazza11.github.io/audio-backup-helper/",
-      "version": "1.6.8",
+      "version": "1.6.9",
       "tags": [
         "audio",
         "pwa",
@@ -339,6 +339,11 @@
         "fingerprint"
       ],
       "changelog": [
+        {
+          "version": "1.6.9",
+          "date": "2026-08-21",
+          "notes": "Silent-track mode: low conf + 10s+ gap \u2192 wait for next burst marker; live Heard roll between spots"
+        },
         {
           "version": "1.6.8",
           "date": "2026-08-21",
@@ -388,7 +393,7 @@
       "issues": [],
       "iconPath": "icon.svg",
       "iconUrl": "./icons/audio-backup-helper.svg",
-      "codeVersion": "1.6.8"
+      "codeVersion": "1.6.9"
     },
     {
       "id": "photostitch",
