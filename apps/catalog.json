@@ -1,6 +1,6 @@
 {
   "hub": "Aaron's Apps",
-  "syncedAt": "2026-08-21T10:28:06Z",
+  "syncedAt": "2026-08-21T10:34:22Z",
   "source": "camp-mother",
   "ok": 9,
   "iconsOk": 8,
@@ -330,7 +330,7 @@
       "installable": true,
       "desktopUrl": "https://azzabazza11.github.io/audio-backup-helper/",
       "appUrl": "https://azzabazza11.github.io/audio-backup-helper/",
-      "version": "1.6.12",
+      "version": "1.6.13",
       "tags": [
         "audio",
         "pwa",
@@ -339,6 +339,11 @@
         "fingerprint"
       ],
       "changelog": [
+        {
+          "version": "1.6.13",
+          "date": "2026-08-21",
+          "notes": "Burst clips: ~200ms preroll onset buffer; end only after ~400ms silence (fewer fragmented clips)"
+        },
         {
           "version": "1.6.12",
           "date": "2026-08-21",
@@ -408,7 +413,7 @@
       "issues": [],
       "iconPath": "icon.svg",
       "iconUrl": "./icons/audio-backup-helper.svg",
-      "codeVersion": "1.6.12"
+      "codeVersion": "1.6.13"
     },
     {
       "id": "photostitch",
