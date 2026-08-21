@@ -1,6 +1,6 @@
 {
   "hub": "Aaron's Apps",
-  "syncedAt": "2026-08-21T09:18:17Z",
+  "syncedAt": "2026-08-21T09:26:38Z",
   "source": "camp-mother",
   "ok": 9,
   "iconsOk": 8,
@@ -330,7 +330,7 @@
       "installable": true,
       "desktopUrl": "https://azzabazza11.github.io/audio-backup-helper/",
       "appUrl": "https://azzabazza11.github.io/audio-backup-helper/",
-      "version": "1.6.6",
+      "version": "1.6.7",
       "tags": [
         "audio",
         "pwa",
@@ -339,6 +339,11 @@
         "fingerprint"
       ],
       "changelog": [
+        {
+          "version": "1.6.7",
+          "date": "2026-08-21",
+          "notes": "Post-lock Heard clips + micro-align under 95%; freeze track dB peak; shared Heard/Track levels; spot checks at \u226595%"
+        },
         {
           "version": "1.6.6",
           "date": "2026-08-21",
@@ -378,7 +383,7 @@
       "issues": [],
       "iconPath": "icon.svg",
       "iconUrl": "./icons/audio-backup-helper.svg",
-      "codeVersion": "1.6.6"
+      "codeVersion": "1.6.7"
     },
     {
       "id": "photostitch",
