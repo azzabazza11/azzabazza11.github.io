@@ -1,6 +1,6 @@
 {
   "hub": "Aaron's Apps",
-  "syncedAt": "2026-08-21T10:45:20Z",
+  "syncedAt": "2026-08-21T10:54:08Z",
   "source": "camp-mother",
   "ok": 9,
   "iconsOk": 8,
@@ -330,7 +330,7 @@
       "installable": true,
       "desktopUrl": "https://azzabazza11.github.io/audio-backup-helper/",
       "appUrl": "https://azzabazza11.github.io/audio-backup-helper/",
-      "version": "1.6.14",
+      "version": "1.6.15",
       "tags": [
         "audio",
         "pwa",
@@ -339,6 +339,11 @@
         "fingerprint"
       ],
       "changelog": [
+        {
+          "version": "1.6.15",
+          "date": "2026-08-21",
+          "notes": "First-minute silence-gap fingerprint; match heard gaps with tunable error gate; snap sync on GAP MATCH"
+        },
         {
           "version": "1.6.14",
           "date": "2026-08-21",
@@ -418,7 +423,7 @@
       "issues": [],
       "iconPath": "icon.svg",
       "iconUrl": "./icons/audio-backup-helper.svg",
-      "codeVersion": "1.6.14"
+      "codeVersion": "1.6.15"
     },
     {
       "id": "photostitch",
