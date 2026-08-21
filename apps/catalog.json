@@ -1,6 +1,6 @@
 {
   "hub": "Aaron's Apps",
-  "syncedAt": "2026-08-21T12:12:03Z",
+  "syncedAt": "2026-08-21T12:21:34Z",
   "source": "camp-mother",
   "ok": 9,
   "iconsOk": 8,
@@ -330,7 +330,7 @@
       "installable": true,
       "desktopUrl": "https://azzabazza11.github.io/audio-backup-helper/",
       "appUrl": "https://azzabazza11.github.io/audio-backup-helper/",
-      "version": "1.6.20",
+      "version": "1.6.21",
       "tags": [
         "audio",
         "pwa",
@@ -339,6 +339,11 @@
         "fingerprint"
       ],
       "changelog": [
+        {
+          "version": "1.6.21",
+          "date": "2026-08-21",
+          "notes": "Revert fine-tune-at-95% + onset viz; keep lock clip-length alignment"
+        },
         {
           "version": "1.6.20",
           "date": "2026-08-21",
@@ -445,7 +450,9 @@
           "notes": "Unified Back me up button (user-clocked track + trail), wide search after repeated misses"
         }
       ],
-      "issues": [],
+      "issues": [
+        "hub.json version 1.6.21 != APP_VER 1.6.20"
+      ],
       "iconPath": "icon.svg",
       "iconUrl": "./icons/audio-backup-helper.svg",
       "codeVersion": "1.6.20"
