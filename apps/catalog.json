@@ -1,6 +1,6 @@
 {
   "hub": "Aaron's Apps",
-  "syncedAt": "2026-08-21T10:34:22Z",
+  "syncedAt": "2026-08-21T10:40:38Z",
   "source": "camp-mother",
   "ok": 9,
   "iconsOk": 8,
@@ -330,7 +330,7 @@
       "installable": true,
       "desktopUrl": "https://azzabazza11.github.io/audio-backup-helper/",
       "appUrl": "https://azzabazza11.github.io/audio-backup-helper/",
-      "version": "1.6.13",
+      "version": "1.6.14",
       "tags": [
         "audio",
         "pwa",
@@ -339,6 +339,11 @@
         "fingerprint"
       ],
       "changelog": [
+        {
+          "version": "1.6.14",
+          "date": "2026-08-21",
+          "notes": "Silent track only after lock drop/fail \u2014 not at session outset"
+        },
         {
           "version": "1.6.13",
           "date": "2026-08-21",
@@ -413,7 +418,7 @@
       "issues": [],
       "iconPath": "icon.svg",
       "iconUrl": "./icons/audio-backup-helper.svg",
-      "codeVersion": "1.6.13"
+      "codeVersion": "1.6.14"
     },
     {
       "id": "photostitch",
