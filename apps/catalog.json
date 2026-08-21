@@ -1,6 +1,6 @@
 {
   "hub": "Aaron's Apps",
-  "syncedAt": "2026-08-20T23:37:37Z",
+  "syncedAt": "2026-08-21T00:48:17Z",
   "source": "camp-mother",
   "ok": 9,
   "iconsOk": 8,
@@ -167,7 +167,7 @@
       "branch": "main",
       "title": "Passenger Tales",
       "category": "Travel",
-      "desc": "Travel companion that narrates local history as you drive \u2014 Wikipedia plus AI-generated regional stories in a natural Gemini voice. Mute, skip, replay.",
+      "desc": "Travel companion that narrates local history, geology, and nearby stories as you drive \u2014 Wikipedia plus AI-generated regional stories in a natural Gemini voice. Mute, skip, replay.",
       "accent": "#e2b15a",
       "icon": "\ud83d\uddfa",
       "platforms": [
@@ -178,7 +178,7 @@
       "installable": true,
       "desktopUrl": "https://azzabazza11.github.io/road-lore/",
       "appUrl": "https://azzabazza11.github.io/road-lore/",
-      "version": "1.8.0",
+      "version": "1.9.0",
       "tags": [
         "travel",
         "gps",
@@ -190,6 +190,11 @@
         "phone"
       ],
       "changelog": [
+        {
+          "version": "1.9.0",
+          "date": "2026-08-20",
+          "notes": "Story interests (history, geology, civic, news, trivia, and more) and short/medium/long length."
+        },
         {
           "version": "1.8.0",
           "date": "2026-08-20",
@@ -229,7 +234,7 @@
       "issues": [],
       "iconPath": "icon.svg",
       "iconUrl": "./icons/road-lore.svg",
-      "codeVersion": "1.8.0"
+      "codeVersion": "1.9.0"
     },
     {
       "id": "chippy-helpers",
