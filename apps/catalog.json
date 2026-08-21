@@ -1,6 +1,6 @@
 {
   "hub": "Aaron's Apps",
-  "syncedAt": "2026-08-21T08:40:02Z",
+  "syncedAt": "2026-08-21T08:40:32Z",
   "source": "camp-mother",
   "ok": 9,
   "iconsOk": 8,
@@ -317,11 +317,12 @@
       "repo": "audio-backup-helper",
       "branch": "main",
       "title": "Back Me Up",
-      "category": "Tools",
-      "desc": "Arm a backup audio track, listen via mic, and take over if the main amplifier cuts out. Load a folder of lesson audio on your phone.",
-      "accent": "#123c32",
-      "icon": "\ud83d\udd0a",
+      "category": "Apps",
+      "desc": "Arm a backup audio track, listen via mic, and take over instantly if the main amplifier cuts out. Audio stays on device.",
+      "accent": "#44ffaa",
+      "icon": "icon.svg",
       "platforms": [
+        "web",
         "android",
         "ios"
       ],
@@ -329,35 +330,50 @@
       "installable": true,
       "desktopUrl": "https://azzabazza11.github.io/audio-backup-helper/",
       "appUrl": "https://azzabazza11.github.io/audio-backup-helper/",
-      "version": "1.6.4",
+      "version": "1.6.5",
       "tags": [
         "audio",
+        "pwa",
         "backup",
         "mic",
-        "pwa",
-        "phone"
+        "fingerprint"
       ],
       "changelog": [
         {
+          "version": "1.6.5",
+          "date": "2026-08-21",
+          "notes": "Heard wave always visible (local bars); coverage soft when score/idf pass; near-miss keeps streak"
+        },
+        {
           "version": "1.6.4",
           "date": "2026-08-20",
-          "notes": "More reliable lock pipeline; Play track and Reset session; backing-mode seek/mute/volume."
+          "notes": "Softer lock (gaps soft, near-miss streak), forward-wide search, Play track / Reset in Settings, playback seek/mute/volume, auto-resume on cutout when audio returns, Heard viz cleanup, settings expand while locked"
         },
         {
-          "version": "1.2.1",
-          "date": "2026-08-17",
-          "notes": "Fix PWA install when opened from Aaron's Apps hub."
+          "version": "1.6.3",
+          "date": "2026-08-19",
+          "notes": "Tiled fingerprint matching (10 s tiles) for uneven hash density"
         },
         {
-          "version": "1.2.0",
-          "date": "2026-08-17",
-          "notes": "Show app version in the UI; match sync on speech bursts."
+          "version": "1.6.2",
+          "date": "2026-08-19",
+          "notes": "Burst-bounded clips, cutout cooldown after lock, cutout event logging"
+        },
+        {
+          "version": "1.6.1",
+          "date": "2026-08-19",
+          "notes": "Pill-bar mic meter, settings lock disables controls, sticky strong-lock, release notes blurb"
+        },
+        {
+          "version": "1.6.0",
+          "date": "2026-08-19",
+          "notes": "Unified Back me up button (user-clocked track + trail), wide search after repeated misses"
         }
       ],
       "issues": [],
       "iconPath": "icon.svg",
       "iconUrl": "./icons/audio-backup-helper.svg",
-      "codeVersion": "1.6.4"
+      "codeVersion": "1.6.5"
     },
     {
       "id": "photostitch",
