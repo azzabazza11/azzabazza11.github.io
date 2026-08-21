@@ -1,6 +1,6 @@
 {
   "hub": "Aaron's Apps",
-  "syncedAt": "2026-08-21T12:04:28Z",
+  "syncedAt": "2026-08-21T12:12:03Z",
   "source": "camp-mother",
   "ok": 9,
   "iconsOk": 8,
@@ -330,7 +330,7 @@
       "installable": true,
       "desktopUrl": "https://azzabazza11.github.io/audio-backup-helper/",
       "appUrl": "https://azzabazza11.github.io/audio-backup-helper/",
-      "version": "1.6.19",
+      "version": "1.6.20",
       "tags": [
         "audio",
         "pwa",
@@ -339,6 +339,11 @@
         "fingerprint"
       ],
       "changelog": [
+        {
+          "version": "1.6.20",
+          "date": "2026-08-21",
+          "notes": "Fix hit/lock amp clock: match start + clip length + age; Heard lined under Track"
+        },
         {
           "version": "1.6.19",
           "date": "2026-08-21",
@@ -443,7 +448,7 @@
       "issues": [],
       "iconPath": "icon.svg",
       "iconUrl": "./icons/audio-backup-helper.svg",
-      "codeVersion": "1.6.19"
+      "codeVersion": "1.6.20"
     },
     {
       "id": "photostitch",
