@@ -1,6 +1,6 @@
 {
   "hub": "Aaron's Apps",
-  "syncedAt": "2026-08-21T04:52:32Z",
+  "syncedAt": "2026-08-21T05:46:30Z",
   "source": "camp-mother",
   "ok": 9,
   "iconsOk": 8,
@@ -80,7 +80,7 @@
       "installable": true,
       "desktopUrl": "https://azzabazza11.github.io/golf-tracker/",
       "appUrl": "https://azzabazza11.github.io/golf-tracker/",
-      "version": "1.5.43",
+      "version": "1.5.45",
       "tags": [
         "golf",
         "gps",
@@ -88,6 +88,16 @@
         "pwa"
       ],
       "changelog": [
+        {
+          "version": "1.5.45",
+          "date": "2026-08-21",
+          "notes": "This Hole list shows live activity (teeing off, walking to ball, putting). Entering the green auto-marks the approach, then the next shot is putting."
+        },
+        {
+          "version": "1.5.44",
+          "date": "2026-08-21",
+          "notes": "GPS accuracy and tee-box bounds are checked before settle/arm. Auto-tee settle starts only in the tee box; fairway settle stays quiet on bad GPS or while still on the tee."
+        },
         {
           "version": "1.5.43",
           "date": "2026-08-21",
@@ -122,7 +132,7 @@
       "issues": [],
       "iconPath": "app-icon.svg",
       "iconUrl": "./icons/golf-tracker.svg",
-      "codeVersion": "1.5.43"
+      "codeVersion": "1.5.45"
     },
     {
       "id": "road-speed",
