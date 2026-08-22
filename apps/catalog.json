@@ -1,6 +1,6 @@
 {
   "hub": "Aaron's Apps",
-  "syncedAt": "2026-08-22T09:17:05Z",
+  "syncedAt": "2026-08-22T09:39:54Z",
   "source": "camp-mother",
   "ok": 9,
   "iconsOk": 8,
@@ -213,7 +213,7 @@
       "installable": true,
       "desktopUrl": "https://azzabazza11.github.io/road-lore/",
       "appUrl": "https://azzabazza11.github.io/road-lore/",
-      "version": "1.9.5",
+      "version": "1.9.6",
       "tags": [
         "travel",
         "gps",
@@ -225,6 +225,11 @@
         "phone"
       ],
       "changelog": [
+        {
+          "version": "1.9.6",
+          "date": "2026-08-22",
+          "notes": "Same-topic follow-ups get a unique Part II title and a spoken \u201cmore to the story of\u2026\u201d heads-up."
+        },
         {
           "version": "1.9.5",
           "date": "2026-08-22",
@@ -294,7 +299,7 @@
       "issues": [],
       "iconPath": "icon.svg",
       "iconUrl": "./icons/road-lore.svg",
-      "codeVersion": "1.9.5"
+      "codeVersion": "1.9.6"
     },
     {
       "id": "chippy-helpers",
