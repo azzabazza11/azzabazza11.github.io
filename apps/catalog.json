@@ -1,6 +1,6 @@
 {
   "hub": "Aaron's Apps",
-  "syncedAt": "2026-08-22T09:02:12Z",
+  "syncedAt": "2026-08-22T09:11:21Z",
   "source": "camp-mother",
   "ok": 9,
   "iconsOk": 8,
@@ -213,7 +213,7 @@
       "installable": true,
       "desktopUrl": "https://azzabazza11.github.io/road-lore/",
       "appUrl": "https://azzabazza11.github.io/road-lore/",
-      "version": "1.9.3",
+      "version": "1.9.4",
       "tags": [
         "travel",
         "gps",
@@ -225,6 +225,11 @@
         "phone"
       ],
       "changelog": [
+        {
+          "version": "1.9.4",
+          "date": "2026-08-22",
+          "notes": "Interests curate narrator cards: Wikipedia, shared clips, and an interest tag on the card."
+        },
         {
           "version": "1.9.3",
           "date": "2026-08-22",
@@ -284,7 +289,7 @@
       "issues": [],
       "iconPath": "icon.svg",
       "iconUrl": "./icons/road-lore.svg",
-      "codeVersion": "1.9.3"
+      "codeVersion": "1.9.4"
     },
     {
       "id": "chippy-helpers",
