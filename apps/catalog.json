@@ -1,6 +1,6 @@
 {
   "hub": "Aaron's Apps",
-  "syncedAt": "2026-08-22T08:46:12Z",
+  "syncedAt": "2026-08-22T09:02:12Z",
   "source": "camp-mother",
   "ok": 9,
   "iconsOk": 8,
@@ -213,7 +213,7 @@
       "installable": true,
       "desktopUrl": "https://azzabazza11.github.io/road-lore/",
       "appUrl": "https://azzabazza11.github.io/road-lore/",
-      "version": "1.9.1",
+      "version": "1.9.3",
       "tags": [
         "travel",
         "gps",
@@ -225,6 +225,16 @@
         "phone"
       ],
       "changelog": [
+        {
+          "version": "1.9.3",
+          "date": "2026-08-22",
+          "notes": "Gemini voice and AI stories are open \u2014 no week-long trial."
+        },
+        {
+          "version": "1.9.2",
+          "date": "2026-08-22",
+          "notes": "Story length applies to Wikipedia and shared clips; More prefers a follow-up of the same tale."
+        },
         {
           "version": "1.9.1",
           "date": "2026-08-22",
@@ -274,7 +284,7 @@
       "issues": [],
       "iconPath": "icon.svg",
       "iconUrl": "./icons/road-lore.svg",
-      "codeVersion": "1.9.1"
+      "codeVersion": "1.9.3"
     },
     {
       "id": "chippy-helpers",
