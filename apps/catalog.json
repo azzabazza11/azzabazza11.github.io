@@ -1,6 +1,6 @@
 {
   "hub": "Aaron's Apps",
-  "syncedAt": "2026-08-23T03:14:01Z",
+  "syncedAt": "2026-08-23T03:30:25Z",
   "source": "camp-mother",
   "ok": 9,
   "iconsOk": 8,
@@ -213,7 +213,7 @@
       "installable": true,
       "desktopUrl": "https://azzabazza11.github.io/road-lore/",
       "appUrl": "https://azzabazza11.github.io/road-lore/",
-      "version": "1.9.6",
+      "version": "1.9.7",
       "tags": [
         "travel",
         "gps",
@@ -225,6 +225,11 @@
         "phone"
       ],
       "changelog": [
+        {
+          "version": "1.9.7",
+          "date": "2026-08-22",
+          "notes": "Admin clip map can Play a stored tale from the pin card \u2014 no new Gemini call."
+        },
         {
           "version": "1.9.6",
           "date": "2026-08-22",
@@ -299,7 +304,7 @@
       "issues": [],
       "iconPath": "icon.svg",
       "iconUrl": "./icons/road-lore.svg",
-      "codeVersion": "1.9.6"
+      "codeVersion": "1.9.7"
     },
     {
       "id": "chippy-helpers",
@@ -307,7 +312,7 @@
       "branch": "master",
       "title": "ABC Done!",
       "category": "Tools",
-      "desc": "Free builder helper: spirit level, slope / fall calculator, and balustrade bay layout. Phone-first, works offline.",
+      "desc": "Free builder helper: spirit level, camera level overlay, slope / fall calculator, and balustrade bay layout. Phone-first, works offline.",
       "accent": "#123c32",
       "icon": "\ud83d\udcd0",
       "platforms": [
@@ -318,14 +323,20 @@
       "installable": true,
       "desktopUrl": "https://azzabazza11.github.io/chippy-helpers/",
       "appUrl": "https://azzabazza11.github.io/chippy-helpers/",
-      "version": "1.2.0",
+      "version": "1.3.0",
       "tags": [
         "builder",
         "level",
+        "camera",
         "balustrade",
         "pwa"
       ],
       "changelog": [
+        {
+          "version": "1.3.0",
+          "date": "2026-08-22",
+          "notes": "Add a camera level overlay: live video with a gravity-true horizon and plumb cross."
+        },
         {
           "version": "1.2.0",
           "date": "2026-08-17",
@@ -340,7 +351,7 @@
       "issues": [],
       "iconPath": "icon.svg",
       "iconUrl": "./icons/chippy-helpers.svg",
-      "codeVersion": "1.2.0"
+      "codeVersion": "1.3.0"
     },
     {
       "id": "audio-backup-helper",
