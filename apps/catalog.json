@@ -1,6 +1,6 @@
 {
   "hub": "Aaron's Apps",
-  "syncedAt": "2026-08-23T03:30:25Z",
+  "syncedAt": "2026-08-23T04:50:51Z",
   "source": "camp-mother",
   "ok": 9,
   "iconsOk": 8,
@@ -323,7 +323,7 @@
       "installable": true,
       "desktopUrl": "https://azzabazza11.github.io/chippy-helpers/",
       "appUrl": "https://azzabazza11.github.io/chippy-helpers/",
-      "version": "1.3.0",
+      "version": "1.3.1",
       "tags": [
         "builder",
         "level",
@@ -332,6 +332,11 @@
         "pwa"
       ],
       "changelog": [
+        {
+          "version": "1.3.1",
+          "date": "2026-08-23",
+          "notes": "Counter-rotate the camera overlay so the horizon stays world-level as the phone turns."
+        },
         {
           "version": "1.3.0",
           "date": "2026-08-22",
@@ -351,7 +356,7 @@
       "issues": [],
       "iconPath": "icon.svg",
       "iconUrl": "./icons/chippy-helpers.svg",
-      "codeVersion": "1.3.0"
+      "codeVersion": "1.3.1"
     },
     {
       "id": "audio-backup-helper",
