@@ -1,6 +1,6 @@
 {
   "hub": "Aaron's Apps",
-  "syncedAt": "2026-08-23T09:24:29Z",
+  "syncedAt": "2026-08-23T09:39:32Z",
   "source": "camp-mother",
   "ok": 9,
   "iconsOk": 8,
@@ -213,7 +213,7 @@
       "installable": true,
       "desktopUrl": "https://azzabazza11.github.io/road-lore/",
       "appUrl": "https://azzabazza11.github.io/road-lore/",
-      "version": "1.10.4",
+      "version": "1.11.0",
       "tags": [
         "travel",
         "gps",
@@ -225,6 +225,11 @@
         "phone"
       ],
       "changelog": [
+        {
+          "version": "1.11.0",
+          "date": "2026-08-23",
+          "notes": "Camping and accommodation suggestions, with Maps, website, and phone launch when OSM has the details."
+        },
         {
           "version": "1.10.4",
           "date": "2026-08-23",
@@ -329,7 +334,7 @@
       "issues": [],
       "iconPath": "icon.svg",
       "iconUrl": "./icons/road-lore.svg",
-      "codeVersion": "1.10.4"
+      "codeVersion": "1.11.0"
     },
     {
       "id": "chippy-helpers",
