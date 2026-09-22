@@ -1,6 +1,6 @@
 {
   "hub": "Aaron's Apps",
-  "syncedAt": "2026-09-22T08:04:13Z",
+  "syncedAt": "2026-09-22T08:15:24Z",
   "source": "camp-mother",
   "ok": 9,
   "iconsOk": 8,
@@ -223,7 +223,7 @@
       "installable": true,
       "desktopUrl": "https://azzabazza11.github.io/road-lore/",
       "appUrl": "https://azzabazza11.github.io/road-lore/",
-      "version": "1.12.0",
+      "version": "1.12.1",
       "tags": [
         "travel",
         "gps",
@@ -235,6 +235,11 @@
         "phone"
       ],
       "changelog": [
+        {
+          "version": "1.12.1",
+          "date": "2026-09-22",
+          "notes": "The clip map starts a fresh session when an older week-long pass has ended, so stored pins load."
+        },
         {
           "version": "1.12.0",
           "date": "2026-09-22",
@@ -359,7 +364,7 @@
       "issues": [],
       "iconPath": "icon.svg",
       "iconUrl": "./icons/road-lore.svg",
-      "codeVersion": "1.12.0"
+      "codeVersion": "1.12.1"
     },
     {
       "id": "chippy-helpers",
