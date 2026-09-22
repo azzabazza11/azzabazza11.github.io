@@ -23,6 +23,8 @@ Camp mother saves the chosen file as `apps/icons/{id}.svg` (or `.png`) and sets 
 
 You can also set `iconPath` on an entry in `apps/registry.json` if the app has no `hub.json` field yet.
 
+The app repo owns the icon. Camp mother copies that file into `apps/icons/`. The hub does not keep a second, different icon for the same app.
+
 ### One-time: enable the Action + repo secret
 
 1. Copy `templates/sync-catalog.yml` to `.github/workflows/sync-catalog.yml` (needs a GitHub token with the `workflow` scope, or add the file in the GitHub UI).

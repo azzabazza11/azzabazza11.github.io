@@ -11,10 +11,10 @@
   "theme_color": "#05050c",
   "icons": [
     {
-      "src": "/apps/icon.svg",
-      "sizes": "any",
-      "type": "image/svg+xml",
-      "purpose": "any maskable"
+      "src": "/apps/icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
     }
   ]
 }

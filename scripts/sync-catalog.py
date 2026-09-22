@@ -42,13 +42,13 @@ def token() -> str:
     ).strip()
 
 
-def api_get(url: str) -> tuple[int, bytes, str]:
+def api_get(url: str, *, auth: bool = True) -> tuple[int, bytes, str]:
     headers = {
         "Accept": "application/vnd.github+json",
         "User-Agent": "aaron-apps-hub-camp-mother",
         "X-GitHub-Api-Version": "2022-11-28",
     }
-    t = token()
+    t = token() if auth else ""
     if t:
         headers["Authorization"] = f"Bearer {t}"
     req = urllib.request.Request(url, headers=headers)
@@ -62,6 +62,10 @@ def api_get(url: str) -> tuple[int, bytes, str]:
 def get_file_bytes(owner: str, repo: str, path: str, branch: str) -> tuple[int, bytes]:
     url = f"https://api.github.com/repos/{owner}/{repo}/contents/{path}?ref={branch}"
     status, body, _ = api_get(url)
+    # Actions' GITHUB_TOKEN is often rejected by the other app repos, while
+    # those public repos are readable with no Authorization header.
+    if status in (401, 403) and token():
+        status, body, _ = api_get(url, auth=False)
     if status != 200:
         return status, b""
     data = json.loads(body.decode("utf-8"))
@@ -143,13 +147,7 @@ def fetch_icon(
     repo = entry["repo"]
     branch = entry.get("branch", "main")
     ICONS_DIR.mkdir(parents=True, exist_ok=True)
-
-    # Drop stale icons for this id (other extensions) so catalog stays clean.
-    for old in ICONS_DIR.glob(f"{app_id}.*"):
-        try:
-            old.unlink()
-        except OSError:
-            pass
+    allowed = ("svg", "png", "webp", "ico", "jpg", "jpeg")
 
     for rel in resolve_icon_candidates(entry, hub):
         raw: bytes | None = None
@@ -165,17 +163,44 @@ def fetch_icon(
             continue
 
         ext = ext_of(rel)
-        if ext not in ("svg", "png", "webp", "ico", "jpg", "jpeg"):
+        if ext not in allowed:
             issues.append(f"unsupported icon type .{ext} ({rel})")
             continue
 
         dest = ICONS_DIR / f"{app_id}.{ext}"
         dest.write_bytes(raw)
+        # Drop other extensions only after a replacement icon is in hand.
+        for old in ICONS_DIR.glob(f"{app_id}.*"):
+            if old.resolve() != dest.resolve():
+                try:
+                    old.unlink()
+                except OSError:
+                    pass
         return f"./icons/{app_id}.{ext}", rel
+
+    # Camp mother often cannot read private app repos. Keep a checked-in
+    # icon (for example one generated for the hub) until a repo icon arrives.
+    local_icon = kept_local_icon(app_id)
+    if local_icon is not None:
+        return f"./icons/{local_icon.name}", "local"
 
     if hub and (hub.get("iconPath") or hub.get("icons")):
         issues.append("iconPath/icons set but file not found")
     return None, None
+
+
+def kept_local_icon(app_id: str) -> Path | None:
+    preferred = (".svg", ".png", ".webp", ".ico", ".jpg", ".jpeg")
+    found = {p.suffix.lower(): p for p in ICONS_DIR.glob(f"{app_id}.*") if p.is_file()}
+    for ext in preferred:
+        if ext in found:
+            return found[ext]
+    return None
+
+
+def _unauthorized(app: dict) -> bool:
+    issues = app.get("issues") or []
+    return any("HTTP 401" in issue or "HTTP 403" in issue for issue in issues)
 
 
 def merge_app(
@@ -297,6 +322,13 @@ def sync() -> dict:
             ok += 1
         apps.append(merge_app(entry, hub, code_version, issues, icon_url))
 
+    # GitHub Actions' default token cannot read the other app repos. Writing
+    # stubs anyway updates syncedAt every hour and conflicts with any PR that
+    # also touches the catalog. Leave the last good catalog in place.
+    if apps and CATALOG_PATH.is_file() and all(_unauthorized(a) for a in apps):
+        print("hub.json unauthorized for every app; leaving catalog.json unchanged")
+        return json.loads(CATALOG_PATH.read_text())
+
     catalog = {
         "hub": "Aaron's Apps",
         "syncedAt": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
@@ -306,6 +338,17 @@ def sync() -> dict:
         "total": len(apps),
         "apps": apps,
     }
+    if CATALOG_PATH.is_file():
+        try:
+            previous = json.loads(CATALOG_PATH.read_text())
+        except json.JSONDecodeError:
+            previous = None
+        if isinstance(previous, dict):
+            previous_body = {k: v for k, v in previous.items() if k != "syncedAt"}
+            next_body = {k: v for k, v in catalog.items() if k != "syncedAt"}
+            if previous_body == next_body:
+                print("catalog unchanged aside from syncedAt; leaving file as-is")
+                return previous
     CATALOG_PATH.write_text(json.dumps(catalog, indent=2) + "\n")
     return catalog
 
