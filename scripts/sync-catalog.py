@@ -143,13 +143,14 @@ def fetch_icon(
     repo = entry["repo"]
     branch = entry.get("branch", "main")
     ICONS_DIR.mkdir(parents=True, exist_ok=True)
+    allowed = ("svg", "png", "webp", "ico", "jpg", "jpeg")
 
-    # Drop stale icons for this id (other extensions) so catalog stays clean.
-    for old in ICONS_DIR.glob(f"{app_id}.*"):
-        try:
-            old.unlink()
-        except OSError:
-            pass
+    # localIcon keeps a file checked into this repo (Lance-generated PNGs).
+    # Camp mother must not replace it with the copy from the app repo.
+    if entry.get("localIcon"):
+        pinned = kept_local_icon(app_id)
+        if pinned is not None:
+            return f"./icons/{pinned.name}", "local"
 
     for rel in resolve_icon_candidates(entry, hub):
         raw: bytes | None = None
@@ -165,17 +166,39 @@ def fetch_icon(
             continue
 
         ext = ext_of(rel)
-        if ext not in ("svg", "png", "webp", "ico", "jpg", "jpeg"):
+        if ext not in allowed:
             issues.append(f"unsupported icon type .{ext} ({rel})")
             continue
 
         dest = ICONS_DIR / f"{app_id}.{ext}"
         dest.write_bytes(raw)
+        # Drop other extensions only after a replacement icon is in hand.
+        for old in ICONS_DIR.glob(f"{app_id}.*"):
+            if old.resolve() != dest.resolve():
+                try:
+                    old.unlink()
+                except OSError:
+                    pass
         return f"./icons/{app_id}.{ext}", rel
+
+    # Camp mother often cannot read private app repos. Keep a checked-in
+    # icon (for example one generated for the hub) until a repo icon arrives.
+    local_icon = kept_local_icon(app_id)
+    if local_icon is not None:
+        return f"./icons/{local_icon.name}", "local"
 
     if hub and (hub.get("iconPath") or hub.get("icons")):
         issues.append("iconPath/icons set but file not found")
     return None, None
+
+
+def kept_local_icon(app_id: str) -> Path | None:
+    preferred = (".svg", ".png", ".webp", ".ico", ".jpg", ".jpeg")
+    found = {p.suffix.lower(): p for p in ICONS_DIR.glob(f"{app_id}.*") if p.is_file()}
+    for ext in preferred:
+        if ext in found:
+            return found[ext]
+    return None
 
 
 def merge_app(

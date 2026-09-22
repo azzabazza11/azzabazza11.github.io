@@ -23,6 +23,8 @@ Camp mother saves the chosen file as `apps/icons/{id}.svg` (or `.png`) and sets 
 
 You can also set `iconPath` on an entry in `apps/registry.json` if the app has no `hub.json` field yet.
 
+Set `"localIcon": true` on a registry entry when the hub should keep a checked-in icon under `apps/icons/` (for example a Lance-generated PNG) instead of replacing it from the app repo on every sync.
+
 ### One-time: enable the Action + repo secret
 
 1. Copy `templates/sync-catalog.yml` to `.github/workflows/sync-catalog.yml` (needs a GitHub token with the `workflow` scope, or add the file in the GitHub UI).

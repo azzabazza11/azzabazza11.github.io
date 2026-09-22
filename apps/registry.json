@@ -7,21 +7,24 @@
       "repo": "sphere-circles",
       "branch": "main",
       "versionFiles": ["screensaver.html", "index.html"],
-      "iconPath": "icon.svg"
+      "iconPath": "icon.svg",
+      "localIcon": true
     },
     {
       "id": "golf-tracker",
       "repo": "golf-tracker",
       "branch": "master",
       "versionFiles": ["index.html"],
-      "iconPath": "app-icon.svg"
+      "iconPath": "app-icon.svg",
+      "localIcon": true
     },
     {
       "id": "road-speed",
       "repo": "road-speed",
       "branch": "main",
       "versionFiles": ["index.html"],
-      "iconPath": "icon.svg"
+      "iconPath": "icon.svg",
+      "localIcon": true
     },
     {
       "id": "road-lore",
@@ -35,20 +38,23 @@
       "repo": "chippy-helpers",
       "branch": "master",
       "versionFiles": ["index.html"],
-      "iconPath": "icon.svg"
+      "iconPath": "icon.svg",
+      "localIcon": true
     },
     {
       "id": "audio-backup-helper",
       "repo": "audio-backup-helper",
       "branch": "main",
       "versionFiles": ["index.html"],
-      "iconPath": "icon.svg"
+      "iconPath": "icon.svg",
+      "localIcon": true
     },
     {
       "id": "photostitch",
       "repo": "PhotoStitch",
       "branch": "main",
-      "versionFiles": ["app.js"]
+      "versionFiles": ["app.js"],
+      "localIcon": true
     },
     {
       "id": "photo-slim",

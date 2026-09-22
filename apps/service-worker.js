@@ -1,10 +1,11 @@
-const CACHE = 'apps-hub-v1.5.0';
+const CACHE = 'apps-hub-v1.5.1';
 const ASSETS = [
   './',
   './index.html',
   './catalog.json',
   './manifest.webmanifest',
-  './icon.svg'
+  './icon.svg',
+  './icon.png'
 ];
 
 async function iconAssets() {
