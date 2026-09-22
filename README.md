@@ -23,7 +23,7 @@ Camp mother saves the chosen file as `apps/icons/{id}.svg` (or `.png`) and sets 
 
 You can also set `iconPath` on an entry in `apps/registry.json` if the app has no `hub.json` field yet.
 
-Set `"localIcon": true` on a registry entry when the hub should keep a checked-in icon under `apps/icons/` (for example a Lance-generated PNG) instead of replacing it from the app repo on every sync.
+The app repo owns the icon. Camp mother copies that file into `apps/icons/`. The hub does not keep a second, different icon for the same app.
 
 ### One-time: enable the Action + repo secret
 
