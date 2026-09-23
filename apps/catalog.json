@@ -1,6 +1,6 @@
 {
   "hub": "Aaron's Apps",
-  "syncedAt": "2026-09-22T22:06:16Z",
+  "syncedAt": "2026-09-23T07:47:55Z",
   "source": "camp-mother",
   "ok": 9,
   "iconsOk": 8,
@@ -223,7 +223,7 @@
       "installable": true,
       "desktopUrl": "https://azzabazza11.github.io/road-lore/",
       "appUrl": "https://azzabazza11.github.io/road-lore/",
-      "version": "1.12.1",
+      "version": "1.12.2",
       "tags": [
         "travel",
         "gps",
@@ -235,6 +235,11 @@
         "phone"
       ],
       "changelog": [
+        {
+          "version": "1.12.2",
+          "date": "2026-09-22",
+          "notes": "Start trip plays a saved nearby card when the network lookup fails, and the home place search is named Local finds."
+        },
         {
           "version": "1.12.1",
           "date": "2026-09-22",
@@ -364,7 +369,7 @@
       "issues": [],
       "iconPath": "icon.svg",
       "iconUrl": "./icons/road-lore.svg",
-      "codeVersion": "1.12.1"
+      "codeVersion": "1.12.2"
     },
     {
       "id": "chippy-helpers",
