@@ -1,8 +1,8 @@
 {
   "hub": "Aaron's Apps",
-  "syncedAt": "2026-09-23T07:47:55Z",
+  "syncedAt": "2026-09-27T08:05:48Z",
   "source": "camp-mother",
-  "ok": 9,
+  "ok": 7,
   "iconsOk": 8,
   "total": 9,
   "apps": [
@@ -612,87 +612,51 @@
       "id": "photo-slim",
       "repo": "photo-slim",
       "branch": "master",
-      "title": "Photo Slim",
-      "category": "Tools",
-      "desc": "Shrink gallery photos for sending \u2014 smaller pixels and files, wipe preview, share or zip. Install on Android to receive shares from Gallery.",
-      "accent": "#123c32",
-      "icon": "\u25a3",
+      "title": "photo-slim",
+      "category": "Apps",
+      "desc": "",
+      "accent": "#44ffaa",
+      "icon": "\u25c7",
       "platforms": [
-        "android",
-        "ios",
         "desktop"
       ],
-      "status": "live",
-      "installable": true,
-      "desktopUrl": "https://azzabazza11.github.io/photo-slim/",
-      "appUrl": "https://azzabazza11.github.io/photo-slim/",
-      "version": "1.1.2",
-      "tags": [
-        "photos",
-        "compress",
-        "resize",
-        "pwa",
-        "phone"
+      "status": "soon",
+      "installable": false,
+      "desktopUrl": "",
+      "appUrl": "",
+      "version": "",
+      "tags": [],
+      "changelog": [],
+      "issues": [
+        "could not read hub.json (HTTP 403)",
+        "using registry stub until hub.json exists"
       ],
-      "changelog": [
-        {
-          "version": "1.1.2",
-          "date": "2026-08-17",
-          "notes": "Treat the /apps/ hub as a separate PWA when offering install."
-        },
-        {
-          "version": "1.1.1",
-          "date": "2026-08-17",
-          "notes": "Fix PWA install when opened from Aaron's Apps hub."
-        }
-      ],
-      "issues": [],
-      "iconPath": "icon.svg",
-      "iconUrl": "./icons/photo-slim.svg",
-      "codeVersion": "1.1.2"
+      "iconUrl": "./icons/photo-slim.svg"
     },
     {
       "id": "pinballplane",
       "repo": "pinballplane",
       "branch": "main",
-      "title": "Pinball Plane",
-      "category": "Games",
-      "desc": "2D pinball built for your phone \u2014 tilt nudge, flippers, table editor, physics tweaks. Open in Chrome and Install / Add to Home Screen.",
-      "accent": "#3dffa8",
-      "icon": "\ud83c\udfae",
+      "title": "pinballplane",
+      "category": "Apps",
+      "desc": "",
+      "accent": "#44ffaa",
+      "icon": "\u25c7",
       "platforms": [
-        "android",
-        "ios",
         "desktop"
       ],
-      "status": "live",
-      "installable": true,
-      "desktopUrl": "https://azzabazza11.github.io/pinballplane/",
-      "appUrl": "https://azzabazza11.github.io/pinballplane/",
-      "version": "1.0.1",
-      "tags": [
-        "game",
-        "pinball",
-        "tilt",
-        "pwa",
-        "phone"
+      "status": "soon",
+      "installable": false,
+      "desktopUrl": "",
+      "appUrl": "",
+      "version": "",
+      "tags": [],
+      "changelog": [],
+      "issues": [
+        "could not read hub.json (HTTP 403)",
+        "using registry stub until hub.json exists"
       ],
-      "changelog": [
-        {
-          "version": "1.0.1",
-          "date": "2026-08-17",
-          "notes": "Fix PWA install when opened from Aaron's Apps hub."
-        },
-        {
-          "version": "1.0.0",
-          "date": "2026-08-14",
-          "notes": "Make Pinball Plane installable as a mobile PWA."
-        }
-      ],
-      "issues": [],
-      "iconPath": "icon.svg",
-      "iconUrl": "./icons/pinballplane.svg",
-      "codeVersion": "1.0.1"
+      "iconUrl": "./icons/pinballplane.svg"
     }
   ]
 }
