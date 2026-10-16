@@ -1,8 +1,8 @@
 {
   "hub": "Aaron's Apps",
-  "syncedAt": "2026-10-15T14:59:12Z",
+  "syncedAt": "2026-10-16T21:03:55Z",
   "source": "camp-mother",
-  "ok": 9,
+  "ok": 4,
   "iconsOk": 8,
   "total": 9,
   "apps": [
@@ -10,422 +10,126 @@
       "id": "sphere-circles",
       "repo": "sphere-circles",
       "branch": "main",
-      "title": "Sphere Circles",
-      "category": "Creative",
-      "desc": "Tangential circles orbiting a sphere \u2014 full controls on desktop, a touch-friendly phone app you can install.",
+      "title": "sphere-circles",
+      "category": "Apps",
+      "desc": "",
       "accent": "#44ffaa",
-      "icon": "\u25c9",
+      "icon": "\u25c7",
       "platforms": [
-        "desktop",
-        "android",
-        "ios"
+        "desktop"
       ],
-      "status": "live",
-      "installable": true,
-      "desktopUrl": "https://azzabazza11.github.io/sphere-circles/",
-      "appUrl": "https://azzabazza11.github.io/sphere-circles/screensaver.html",
-      "version": "1.6.26",
-      "tags": [
-        "animation",
-        "phone",
-        "pwa"
+      "status": "soon",
+      "installable": false,
+      "desktopUrl": "",
+      "appUrl": "",
+      "version": "",
+      "tags": [],
+      "changelog": [],
+      "issues": [
+        "could not read hub.json (HTTP 403)",
+        "using registry stub until hub.json exists"
       ],
-      "changelog": [
-        {
-          "version": "1.6.26",
-          "date": "2026-08-20",
-          "notes": "Listen mode: mic energy pulses, glows, and nudges the flock (no recording)."
-        },
-        {
-          "version": "1.6.25",
-          "date": "2026-08-20",
-          "notes": "Save Flow snapshots; with 2+ snaps Auto flow morphs between them instead of sparse random wander."
-        },
-        {
-          "version": "1.6.24",
-          "date": "2026-08-20",
-          "notes": "In fullscreen, a floating stick pops up every minute or two so you can try hold-drag."
-        },
-        {
-          "version": "1.6.23",
-          "date": "2026-08-20",
-          "notes": "Full 360\u00b0 Orbit with a soft pitch rock; long-press Orbit for multi-axis dance speeds."
-        },
-        {
-          "version": "1.6.22",
-          "date": "2026-08-20",
-          "notes": "Toggle circle strokes off in Look, leaving dots when Dots is on."
-        }
-      ],
-      "issues": [],
-      "iconPath": "icon.svg",
-      "iconUrl": "./icons/sphere-circles.svg",
-      "codeVersion": "1.6.26"
+      "iconUrl": "./icons/sphere-circles.svg"
     },
     {
       "id": "golf-tracker",
       "repo": "golf-tracker",
       "branch": "master",
-      "title": "Golf Shot Tracker",
-      "category": "Sports",
-      "desc": "Track shot distances with GPS on the course. Tee off, mark, hole out \u2014 rounds stay on your device, no account needed.",
-      "accent": "#2ecc71",
-      "icon": "\u26f3",
+      "title": "golf-tracker",
+      "category": "Apps",
+      "desc": "",
+      "accent": "#44ffaa",
+      "icon": "\u25c7",
       "platforms": [
-        "android",
-        "ios",
         "desktop"
       ],
-      "status": "live",
-      "installable": true,
-      "desktopUrl": "https://azzabazza11.github.io/golf-tracker/",
-      "appUrl": "https://azzabazza11.github.io/golf-tracker/",
-      "version": "1.5.47",
-      "tags": [
-        "golf",
-        "gps",
-        "sports",
-        "pwa"
+      "status": "soon",
+      "installable": false,
+      "desktopUrl": "",
+      "appUrl": "",
+      "version": "",
+      "tags": [],
+      "changelog": [],
+      "issues": [
+        "could not read hub.json (HTTP 403)",
+        "using registry stub until hub.json exists"
       ],
-      "changelog": [
-        {
-          "version": "1.5.47",
-          "date": "2026-09-22",
-          "notes": "Colourful home-screen icon: golf ball, pin flag, and sun on a fairway sunset."
-        },
-        {
-          "version": "1.5.46",
-          "date": "2026-08-21",
-          "notes": "Play and pocket lock go full screen, hiding the phone status bar and bottom nav when the browser allows it."
-        },
-        {
-          "version": "1.5.45",
-          "date": "2026-08-21",
-          "notes": "This Hole list shows live activity (teeing off, walking to ball, putting). Entering the green auto-marks the approach, then the next shot is putting."
-        },
-        {
-          "version": "1.5.44",
-          "date": "2026-08-21",
-          "notes": "GPS accuracy and tee-box bounds are checked before settle/arm. Auto-tee settle starts only in the tee box; fairway settle stays quiet on bad GPS or while still on the tee."
-        },
-        {
-          "version": "1.5.43",
-          "date": "2026-08-21",
-          "notes": "Settle/arm stays quiet until you walk Min shot move away from the last mark or tee."
-        },
-        {
-          "version": "1.5.42",
-          "date": "2026-08-21",
-          "notes": "Walk to next tee is tappable to set tee GPS and line up the map on a first round."
-        },
-        {
-          "version": "1.5.41",
-          "date": "2026-08-21",
-          "notes": "Jump to Hole sticks instead of snapping back to the nearest mapped tee."
-        },
-        {
-          "version": "1.5.40",
-          "date": "2026-08-21",
-          "notes": "Long-press Set tee maps GPS without starting the hole; auto-mark can fire after first tee-off."
-        },
-        {
-          "version": "1.5.39",
-          "date": "2026-08-17",
-          "notes": "Fix PWA install when opened from Aaron's Apps hub."
-        },
-        {
-          "version": "1.5.38",
-          "date": "2026-08-13",
-          "notes": "Honor ?install=1 from the apps hub to open the install prompt."
-        }
-      ],
-      "issues": [],
-      "iconPath": "app-icon.png",
-      "iconUrl": "./icons/golf-tracker.svg",
-      "codeVersion": "1.5.47"
+      "iconUrl": "./icons/golf-tracker.svg"
     },
     {
       "id": "road-speed",
       "repo": "road-speed",
       "branch": "main",
-      "title": "Road Speed",
-      "category": "Tools",
-      "desc": "GPS speedometer that listens for road motion, auto-logs journeys, sticky speed limits, and a casual overspeed ding.",
-      "accent": "#3dd6c6",
-      "icon": "\u23f1",
+      "title": "road-speed",
+      "category": "Apps",
+      "desc": "",
+      "accent": "#44ffaa",
+      "icon": "\u25c7",
       "platforms": [
-        "android",
-        "ios"
+        "desktop"
       ],
-      "status": "live",
-      "installable": true,
-      "desktopUrl": "https://azzabazza11.github.io/road-speed/",
-      "appUrl": "https://azzabazza11.github.io/road-speed/",
-      "version": "1.6.0",
-      "tags": [
-        "speed",
-        "gps",
-        "driving",
-        "pwa",
-        "phone"
+      "status": "soon",
+      "installable": false,
+      "desktopUrl": "",
+      "appUrl": "",
+      "version": "",
+      "tags": [],
+      "changelog": [],
+      "issues": [
+        "could not read hub.json (HTTP 403)",
+        "using registry stub until hub.json exists"
       ],
-      "changelog": [
-        {
-          "version": "1.6.0",
-          "date": "2026-08-21",
-          "notes": "Big Set limit buttons for 50 / 60 / 70 / 80 / 100, plus an All speeds screen for 10\u2013110 km/h."
-        },
-        {
-          "version": "1.5.1",
-          "date": "2026-08-20",
-          "notes": "Fix speed stuck at 0: live GPS when listening, derive km/h from movement when the chip reports 0."
-        },
-        {
-          "version": "1.5.0",
-          "date": "2026-08-21",
-          "notes": "Simplify drive UI: auto listen above 10 km/h, auto start/end journeys; Set limit and avg zone stay manual."
-        },
-        {
-          "version": "1.4.0",
-          "date": "2026-08-21",
-          "notes": "Sticky Set limit along the route; mapped stretches from earlier trips; mid-trip overrides only until that stretch ends."
-        },
-        {
-          "version": "1.3.3",
-          "date": "2026-08-17",
-          "notes": "Remove the question-mark install button from the top bar."
-        },
-        {
-          "version": "1.3.2",
-          "date": "2026-08-17",
-          "notes": "Fix PWA install when opened inside the Apps hub."
-        }
-      ],
-      "issues": [],
-      "iconPath": "icon.svg",
-      "iconUrl": "./icons/road-speed.svg",
-      "codeVersion": "1.6.0"
+      "iconUrl": "./icons/road-speed.svg"
     },
     {
       "id": "road-lore",
       "repo": "road-lore",
       "branch": "main",
-      "title": "Passenger Tales",
-      "category": "Travel",
-      "desc": "Travel companion that narrates local history, geology, and nearby stories as you drive \u2014 Wikipedia plus AI-generated regional stories in a natural Gemini voice. Mute, skip, replay.",
-      "accent": "#e2b15a",
-      "icon": "\ud83d\uddfa",
+      "title": "road-lore",
+      "category": "Apps",
+      "desc": "",
+      "accent": "#44ffaa",
+      "icon": "\u25c7",
       "platforms": [
-        "android",
-        "ios"
+        "desktop"
       ],
-      "status": "live",
-      "installable": true,
-      "desktopUrl": "https://azzabazza11.github.io/road-lore/",
-      "appUrl": "https://azzabazza11.github.io/road-lore/",
-      "version": "1.12.2",
-      "tags": [
-        "travel",
-        "gps",
-        "wikipedia",
-        "ai",
-        "gemini",
-        "voice",
-        "pwa",
-        "phone"
+      "status": "soon",
+      "installable": false,
+      "desktopUrl": "",
+      "appUrl": "",
+      "version": "",
+      "tags": [],
+      "changelog": [],
+      "issues": [
+        "could not read hub.json (HTTP 403)",
+        "using registry stub until hub.json exists"
       ],
-      "changelog": [
-        {
-          "version": "1.12.2",
-          "date": "2026-09-22",
-          "notes": "Start trip plays a saved nearby card when the network lookup fails, and the home place search is named Local finds."
-        },
-        {
-          "version": "1.12.1",
-          "date": "2026-09-22",
-          "notes": "The clip map starts a fresh session when an older week-long pass has ended, so stored pins load."
-        },
-        {
-          "version": "1.12.0",
-          "date": "2026-09-22",
-          "notes": "Home and Settings open the clip map in the browser so stored stories can be browsed and played."
-        },
-        {
-          "version": "1.11.2",
-          "date": "2026-09-22",
-          "notes": "Map pin cards play the stored clip from Cloud Storage, including while Cloud Run is still on the older clip list."
-        },
-        {
-          "version": "1.11.1",
-          "date": "2026-09-21",
-          "notes": "The phone keeps the last ten story cards and spoken clips for replay."
-        },
-        {
-          "version": "1.11.0",
-          "date": "2026-08-23",
-          "notes": "Camping and accommodation suggestions, with Maps, website, and phone launch when OSM has the details."
-        },
-        {
-          "version": "1.10.4",
-          "date": "2026-08-23",
-          "notes": "Colourful sunset-road app icon with teal story waves."
-        },
-        {
-          "version": "1.10.3",
-          "date": "2026-08-23",
-          "notes": "Suggestion results show a Wikimedia thumb when the place has Wikipedia, Wikidata, or Commons media."
-        },
-        {
-          "version": "1.10.2",
-          "date": "2026-08-23",
-          "notes": "Suggestions panel lists the places found and a Maps icon opens each pin in Google Maps."
-        },
-        {
-          "version": "1.10.1",
-          "date": "2026-08-23",
-          "notes": "Suggestions fall back to OpenStreetMap when Cloud Run is behind Pages, and say empty instead of failed."
-        },
-        {
-          "version": "1.10.0",
-          "date": "2026-08-23",
-          "notes": "One-shot nearby suggestions (dining, parks, restrooms, and more) with up to three Maps hops."
-        },
-        {
-          "version": "1.9.7",
-          "date": "2026-08-22",
-          "notes": "Admin clip map can Play a stored tale from the pin card \u2014 no new Gemini call."
-        },
-        {
-          "version": "1.9.6",
-          "date": "2026-08-22",
-          "notes": "Same-topic follow-ups get a unique Part II title and a spoken \u201cmore to the story of\u2026\u201d heads-up."
-        },
-        {
-          "version": "1.9.5",
-          "date": "2026-08-22",
-          "notes": "Occasionally credit a worthy source aloud and add a Sources link on the card."
-        },
-        {
-          "version": "1.9.4",
-          "date": "2026-08-22",
-          "notes": "Interests curate narrator cards: Wikipedia, shared clips, and an interest tag on the card."
-        },
-        {
-          "version": "1.9.3",
-          "date": "2026-08-22",
-          "notes": "Gemini voice and AI stories are open \u2014 no week-long trial."
-        },
-        {
-          "version": "1.9.2",
-          "date": "2026-08-22",
-          "notes": "Story length applies to Wikipedia and shared clips; More prefers a follow-up of the same tale."
-        },
-        {
-          "version": "1.9.1",
-          "date": "2026-08-22",
-          "notes": "Don\u2019t-repeat uses a lasting title list and continues a tale instead of retelling it."
-        },
-        {
-          "version": "1.9.0",
-          "date": "2026-08-20",
-          "notes": "Story interests (history, geology, civic, news, trivia, and more) and short/medium/long length."
-        },
-        {
-          "version": "1.8.0",
-          "date": "2026-08-20",
-          "notes": "Random Gemini voice option; auto voice preview with on-phone sample cache; remove Test voice button."
-        },
-        {
-          "version": "1.7.2",
-          "date": "2026-08-20",
-          "notes": "Bigger admin-map pins that scale with zoom; lock versions to Aaron's Apps camp mother."
-        },
-        {
-          "version": "1.7.1",
-          "date": "2026-08-20",
-          "notes": "Replace install PNGs with Passenger Tales road icon."
-        },
-        {
-          "version": "1.7.0",
-          "date": "2026-08-20",
-          "notes": "Phase 3 admin OSM map of shared clips."
-        },
-        {
-          "version": "1.6.0",
-          "date": "2026-08-20",
-          "notes": "Phase 2 shared nearby clip library."
-        },
-        {
-          "version": "1.3.6",
-          "date": "2026-08-19",
-          "notes": "Make More apps a share-sheet button and drop the home share icon."
-        },
-        {
-          "version": "1.3.5",
-          "date": "2026-08-19",
-          "notes": "Let Pages use Gemini by calling Cloud Run."
-        }
-      ],
-      "issues": [],
-      "iconPath": "icon.svg",
-      "iconUrl": "./icons/road-lore.svg",
-      "codeVersion": "1.12.2"
+      "iconUrl": "./icons/road-lore.svg"
     },
     {
       "id": "chippy-helpers",
       "repo": "chippy-helpers",
       "branch": "master",
-      "title": "ABC Done!",
-      "category": "Tools",
-      "desc": "Free builder helper: spirit level, slope / fall calculator, and balustrade bay layout. Phone-first, works offline.",
-      "accent": "#123c32",
-      "icon": "\ud83d\udcd0",
+      "title": "chippy-helpers",
+      "category": "Apps",
+      "desc": "",
+      "accent": "#44ffaa",
+      "icon": "\u25c7",
       "platforms": [
-        "android",
-        "ios"
+        "desktop"
       ],
-      "status": "live",
-      "installable": true,
-      "desktopUrl": "https://azzabazza11.github.io/chippy-helpers/",
-      "appUrl": "https://azzabazza11.github.io/chippy-helpers/",
-      "version": "1.4.0",
-      "tags": [
-        "builder",
-        "level",
-        "balustrade",
-        "pwa"
+      "status": "soon",
+      "installable": false,
+      "desktopUrl": "",
+      "appUrl": "",
+      "version": "",
+      "tags": [],
+      "changelog": [],
+      "issues": [
+        "could not read hub.json (HTTP 403)",
+        "using registry stub until hub.json exists"
       ],
-      "changelog": [
-        {
-          "version": "1.4.0",
-          "date": "2026-08-23",
-          "notes": "Remove the camera video level; Level is spirit bubble and slope calc only."
-        },
-        {
-          "version": "1.3.1",
-          "date": "2026-08-23",
-          "notes": "Counter-rotate the camera overlay so the horizon stays world-level as the phone turns."
-        },
-        {
-          "version": "1.3.0",
-          "date": "2026-08-22",
-          "notes": "Add a camera level overlay: live video with a gravity-true horizon and plumb cross."
-        },
-        {
-          "version": "1.2.0",
-          "date": "2026-08-17",
-          "notes": "Refresh the app UI and add theme settings."
-        },
-        {
-          "version": "1.1.1",
-          "date": "2026-08-17",
-          "notes": "Treat the /apps/ hub as a separate PWA when offering install."
-        }
-      ],
-      "issues": [],
-      "iconPath": "icon.svg",
-      "iconUrl": "./icons/chippy-helpers.svg",
-      "codeVersion": "1.4.0"
+      "iconUrl": "./icons/chippy-helpers.png"
     },
     {
       "id": "audio-backup-helper",
