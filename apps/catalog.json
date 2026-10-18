@@ -1,8 +1,8 @@
 {
   "hub": "Aaron's Apps",
-  "syncedAt": "2026-10-18T20:38:05Z",
+  "syncedAt": "2026-10-18T23:08:50Z",
   "source": "camp-mother",
-  "ok": 4,
+  "ok": 9,
   "iconsOk": 8,
   "total": 9,
   "apps": [
@@ -375,125 +375,324 @@
       "id": "chippy-helpers",
       "repo": "chippy-helpers",
       "branch": "master",
-      "title": "chippy-helpers",
-      "category": "Apps",
-      "desc": "",
-      "accent": "#44ffaa",
-      "icon": "\u25c7",
+      "title": "ABC Done!",
+      "category": "Tools",
+      "desc": "Free builder helper: spirit level, slope / fall calculator, and balustrade bay layout. Phone-first, works offline.",
+      "accent": "#123c32",
+      "icon": "\ud83d\udcd0",
       "platforms": [
-        "desktop"
+        "android",
+        "ios"
       ],
-      "status": "soon",
-      "installable": false,
-      "desktopUrl": "",
-      "appUrl": "",
-      "version": "",
-      "tags": [],
-      "changelog": [],
-      "issues": [
-        "could not read hub.json (HTTP 403)",
-        "using registry stub until hub.json exists"
+      "status": "live",
+      "installable": true,
+      "desktopUrl": "https://azzabazza11.github.io/chippy-helpers/",
+      "appUrl": "https://azzabazza11.github.io/chippy-helpers/",
+      "version": "1.4.0",
+      "tags": [
+        "builder",
+        "level",
+        "balustrade",
+        "pwa"
       ],
-      "iconUrl": "./icons/chippy-helpers.svg"
+      "changelog": [
+        {
+          "version": "1.4.0",
+          "date": "2026-08-23",
+          "notes": "Remove the camera video level; Level is spirit bubble and slope calc only."
+        },
+        {
+          "version": "1.3.1",
+          "date": "2026-08-23",
+          "notes": "Counter-rotate the camera overlay so the horizon stays world-level as the phone turns."
+        },
+        {
+          "version": "1.3.0",
+          "date": "2026-08-22",
+          "notes": "Add a camera level overlay: live video with a gravity-true horizon and plumb cross."
+        },
+        {
+          "version": "1.2.0",
+          "date": "2026-08-17",
+          "notes": "Refresh the app UI and add theme settings."
+        },
+        {
+          "version": "1.1.1",
+          "date": "2026-08-17",
+          "notes": "Treat the /apps/ hub as a separate PWA when offering install."
+        }
+      ],
+      "issues": [],
+      "iconPath": "icon.svg",
+      "iconUrl": "./icons/chippy-helpers.svg",
+      "codeVersion": "1.4.0"
     },
     {
       "id": "audio-backup-helper",
       "repo": "audio-backup-helper",
       "branch": "main",
-      "title": "audio-backup-helper",
+      "title": "Back Me Up",
       "category": "Apps",
-      "desc": "",
+      "desc": "Arm a backup audio track, listen via mic, and take over instantly if the main amplifier cuts out. Audio stays on device.",
       "accent": "#44ffaa",
-      "icon": "\u25c7",
+      "icon": "icon.svg",
       "platforms": [
-        "desktop"
+        "web",
+        "android",
+        "ios"
       ],
-      "status": "soon",
-      "installable": false,
-      "desktopUrl": "",
-      "appUrl": "",
-      "version": "",
-      "tags": [],
-      "changelog": [],
-      "issues": [
-        "could not read hub.json (HTTP 403)",
-        "using registry stub until hub.json exists"
+      "status": "live",
+      "installable": true,
+      "desktopUrl": "https://azzabazza11.github.io/audio-backup-helper/",
+      "appUrl": "https://azzabazza11.github.io/audio-backup-helper/",
+      "version": "1.6.22",
+      "tags": [
+        "audio",
+        "pwa",
+        "backup",
+        "mic",
+        "fingerprint"
       ],
-      "iconUrl": "./icons/audio-backup-helper.svg"
+      "changelog": [
+        {
+          "version": "1.6.22",
+          "date": "2026-08-21",
+          "notes": "Fine-tune \u226595% via 20% peak crossings (clip vs track); 20s window; viz markers"
+        },
+        {
+          "version": "1.6.21",
+          "date": "2026-08-21",
+          "notes": "Revert fine-tune-at-95% + onset viz; keep lock clip-length alignment"
+        },
+        {
+          "version": "1.6.20",
+          "date": "2026-08-21",
+          "notes": "Fix hit/lock amp clock: match start + clip length + age; Heard lined under Track"
+        },
+        {
+          "version": "1.6.19",
+          "date": "2026-08-21",
+          "notes": "Fine-tune 20s onset window while locked \u226595%; Track viz markers + FINE log"
+        },
+        {
+          "version": "1.6.18",
+          "date": "2026-08-21",
+          "notes": "Hold lock on one on-clock weak spot; allow pre-lock catch-up clock drift"
+        },
+        {
+          "version": "1.6.17",
+          "date": "2026-08-21",
+          "notes": "Amp-time confidence election; outlier-boot burst slips; tighter gap gate; sub-second pulls only"
+        },
+        {
+          "version": "1.6.16",
+          "date": "2026-08-21",
+          "notes": "Amp-ahead hunt bias; locked burst-onset slip over ~20s during spot mode"
+        },
+        {
+          "version": "1.6.15",
+          "date": "2026-08-21",
+          "notes": "First-minute silence-gap fingerprint; match heard gaps with tunable error gate; snap sync on GAP MATCH"
+        },
+        {
+          "version": "1.6.14",
+          "date": "2026-08-21",
+          "notes": "Silent track only after lock drop/fail \u2014 not at session outset"
+        },
+        {
+          "version": "1.6.13",
+          "date": "2026-08-21",
+          "notes": "Burst clips: ~200ms preroll onset buffer; end only after ~400ms silence (fewer fragmented clips)"
+        },
+        {
+          "version": "1.6.12",
+          "date": "2026-08-21",
+          "notes": "Trail is settings-only; stop auto-measuring/overwriting to 1s on lock"
+        },
+        {
+          "version": "1.6.11",
+          "date": "2026-08-21",
+          "notes": "Drop lock below 90% confidence; silent-track only when unlocked; stop re-snapping same gap (log #2)"
+        },
+        {
+          "version": "1.6.10",
+          "date": "2026-08-21",
+          "notes": "Reject far teleport hits; gap-seed only near clock; proximity-biased tile ranking (log #1 fix)"
+        },
+        {
+          "version": "1.6.9",
+          "date": "2026-08-21",
+          "notes": "Silent-track mode: low conf + 10s+ gap \u2192 wait for next burst marker; live Heard roll between spots"
+        },
+        {
+          "version": "1.6.8",
+          "date": "2026-08-21",
+          "notes": "Skip track silence on trigger/search; widen micro-hunt when confidence mid/low; slip toward better score"
+        },
+        {
+          "version": "1.6.7",
+          "date": "2026-08-21",
+          "notes": "Post-lock Heard clips + micro-align under 95%; freeze track dB peak; shared Heard/Track levels; spot checks at \u226595%"
+        },
+        {
+          "version": "1.6.6",
+          "date": "2026-08-21",
+          "notes": "Delay clock until amp audio; cutout slip on auto-resume; silence-gap search seed; Reset zeros Amp/Backup; softer edge cutouts"
+        },
+        {
+          "version": "1.6.5",
+          "date": "2026-08-21",
+          "notes": "Heard wave always visible (local bars); coverage soft when score/idf pass; near-miss keeps streak"
+        },
+        {
+          "version": "1.6.4",
+          "date": "2026-08-20",
+          "notes": "Softer lock (gaps soft, near-miss streak), forward-wide search, Play track / Reset in Settings, playback seek/mute/volume, auto-resume on cutout when audio returns, Heard viz cleanup, settings expand while locked"
+        },
+        {
+          "version": "1.6.3",
+          "date": "2026-08-19",
+          "notes": "Tiled fingerprint matching (10 s tiles) for uneven hash density"
+        },
+        {
+          "version": "1.6.2",
+          "date": "2026-08-19",
+          "notes": "Burst-bounded clips, cutout cooldown after lock, cutout event logging"
+        },
+        {
+          "version": "1.6.1",
+          "date": "2026-08-19",
+          "notes": "Pill-bar mic meter, settings lock disables controls, sticky strong-lock, release notes blurb"
+        },
+        {
+          "version": "1.6.0",
+          "date": "2026-08-19",
+          "notes": "Unified Back me up button (user-clocked track + trail), wide search after repeated misses"
+        }
+      ],
+      "issues": [],
+      "iconPath": "icon.svg",
+      "iconUrl": "./icons/audio-backup-helper.svg",
+      "codeVersion": "1.6.22"
     },
     {
       "id": "photostitch",
       "repo": "PhotoStitch",
       "branch": "main",
-      "title": "photostitch",
-      "category": "Apps",
-      "desc": "",
-      "accent": "#44ffaa",
-      "icon": "\u25c7",
+      "title": "PhotoStitch",
+      "category": "Tools",
+      "desc": "Stitch overlapping screenshots (maps, satellite tiles) into one montage PNG. Desktop \u2014 pick every join yourself.",
+      "accent": "#7fd4ff",
+      "icon": "\u29c9",
       "platforms": [
         "desktop"
       ],
-      "status": "soon",
+      "status": "live",
       "installable": false,
-      "desktopUrl": "",
-      "appUrl": "",
-      "version": "",
-      "tags": [],
-      "changelog": [],
-      "issues": [
-        "could not read hub.json (HTTP 403)",
-        "using registry stub until hub.json exists"
-      ]
+      "desktopUrl": "https://azzabazza11.github.io/PhotoStitch/",
+      "appUrl": "https://azzabazza11.github.io/PhotoStitch/",
+      "version": "30",
+      "tags": [
+        "stitch",
+        "screenshots",
+        "maps",
+        "desktop"
+      ],
+      "changelog": [
+        {
+          "version": "30",
+          "date": "2026-08-08",
+          "notes": "Fix adding photos to the rail and support multi-select delete."
+        }
+      ],
+      "issues": [],
+      "codeVersion": "30"
     },
     {
       "id": "photo-slim",
       "repo": "photo-slim",
       "branch": "master",
-      "title": "photo-slim",
-      "category": "Apps",
-      "desc": "",
-      "accent": "#44ffaa",
-      "icon": "\u25c7",
+      "title": "Photo Slim",
+      "category": "Tools",
+      "desc": "Shrink gallery photos for sending \u2014 smaller pixels and files, wipe preview, share or zip. Install on Android to receive shares from Gallery.",
+      "accent": "#123c32",
+      "icon": "\u25a3",
       "platforms": [
+        "android",
+        "ios",
         "desktop"
       ],
-      "status": "soon",
-      "installable": false,
-      "desktopUrl": "",
-      "appUrl": "",
-      "version": "",
-      "tags": [],
-      "changelog": [],
-      "issues": [
-        "could not read hub.json (HTTP 403)",
-        "using registry stub until hub.json exists"
+      "status": "live",
+      "installable": true,
+      "desktopUrl": "https://azzabazza11.github.io/photo-slim/",
+      "appUrl": "https://azzabazza11.github.io/photo-slim/",
+      "version": "1.1.2",
+      "tags": [
+        "photos",
+        "compress",
+        "resize",
+        "pwa",
+        "phone"
       ],
-      "iconUrl": "./icons/photo-slim.svg"
+      "changelog": [
+        {
+          "version": "1.1.2",
+          "date": "2026-08-17",
+          "notes": "Treat the /apps/ hub as a separate PWA when offering install."
+        },
+        {
+          "version": "1.1.1",
+          "date": "2026-08-17",
+          "notes": "Fix PWA install when opened from Aaron's Apps hub."
+        }
+      ],
+      "issues": [],
+      "iconPath": "icon.svg",
+      "iconUrl": "./icons/photo-slim.svg",
+      "codeVersion": "1.1.2"
     },
     {
       "id": "pinballplane",
       "repo": "pinballplane",
       "branch": "main",
-      "title": "pinballplane",
-      "category": "Apps",
-      "desc": "",
-      "accent": "#44ffaa",
-      "icon": "\u25c7",
+      "title": "Pinball Plane",
+      "category": "Games",
+      "desc": "2D pinball built for your phone \u2014 tilt nudge, flippers, table editor, physics tweaks. Open in Chrome and Install / Add to Home Screen.",
+      "accent": "#3dffa8",
+      "icon": "\ud83c\udfae",
       "platforms": [
+        "android",
+        "ios",
         "desktop"
       ],
-      "status": "soon",
-      "installable": false,
-      "desktopUrl": "",
-      "appUrl": "",
-      "version": "",
-      "tags": [],
-      "changelog": [],
-      "issues": [
-        "could not read hub.json (HTTP 403)",
-        "using registry stub until hub.json exists"
+      "status": "live",
+      "installable": true,
+      "desktopUrl": "https://azzabazza11.github.io/pinballplane/",
+      "appUrl": "https://azzabazza11.github.io/pinballplane/",
+      "version": "1.0.1",
+      "tags": [
+        "game",
+        "pinball",
+        "tilt",
+        "pwa",
+        "phone"
       ],
-      "iconUrl": "./icons/pinballplane.svg"
+      "changelog": [
+        {
+          "version": "1.0.1",
+          "date": "2026-08-17",
+          "notes": "Fix PWA install when opened from Aaron's Apps hub."
+        },
+        {
+          "version": "1.0.0",
+          "date": "2026-08-14",
+          "notes": "Make Pinball Plane installable as a mobile PWA."
+        }
+      ],
+      "issues": [],
+      "iconPath": "icon.svg",
+      "iconUrl": "./icons/pinballplane.svg",
+      "codeVersion": "1.0.1"
     }
   ]
 }
