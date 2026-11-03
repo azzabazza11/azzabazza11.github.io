@@ -1,8 +1,8 @@
 {
   "hub": "Aaron's Apps",
-  "syncedAt": "2026-11-03T15:04:05Z",
+  "syncedAt": "2026-11-03T20:57:32Z",
   "source": "camp-mother",
-  "ok": 8,
+  "ok": 9,
   "iconsOk": 8,
   "total": 9,
   "apps": [
@@ -648,32 +648,51 @@
       ],
       "issues": [],
       "iconPath": "icon.svg",
-      "iconUrl": "./icons/photo-slim.svg"
+      "iconUrl": "./icons/photo-slim.svg",
+      "codeVersion": "1.1.2"
     },
     {
       "id": "pinballplane",
       "repo": "pinballplane",
       "branch": "main",
-      "title": "pinballplane",
-      "category": "Apps",
-      "desc": "",
-      "accent": "#44ffaa",
-      "icon": "\u25c7",
+      "title": "Pinball Plane",
+      "category": "Games",
+      "desc": "2D pinball built for your phone \u2014 tilt nudge, flippers, table editor, physics tweaks. Open in Chrome and Install / Add to Home Screen.",
+      "accent": "#3dffa8",
+      "icon": "\ud83c\udfae",
       "platforms": [
+        "android",
+        "ios",
         "desktop"
       ],
-      "status": "soon",
-      "installable": false,
-      "desktopUrl": "",
-      "appUrl": "",
-      "version": "",
-      "tags": [],
-      "changelog": [],
-      "issues": [
-        "could not read hub.json (HTTP 403)",
-        "using registry stub until hub.json exists"
+      "status": "live",
+      "installable": true,
+      "desktopUrl": "https://azzabazza11.github.io/pinballplane/",
+      "appUrl": "https://azzabazza11.github.io/pinballplane/",
+      "version": "1.0.1",
+      "tags": [
+        "game",
+        "pinball",
+        "tilt",
+        "pwa",
+        "phone"
       ],
-      "iconUrl": "./icons/pinballplane.svg"
+      "changelog": [
+        {
+          "version": "1.0.1",
+          "date": "2026-08-17",
+          "notes": "Fix PWA install when opened from Aaron's Apps hub."
+        },
+        {
+          "version": "1.0.0",
+          "date": "2026-08-14",
+          "notes": "Make Pinball Plane installable as a mobile PWA."
+        }
+      ],
+      "issues": [],
+      "iconPath": "icon.svg",
+      "iconUrl": "./icons/pinballplane.svg",
+      "codeVersion": "1.0.1"
     }
   ]
 }
